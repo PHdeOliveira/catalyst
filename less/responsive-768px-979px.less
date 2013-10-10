@@ -1,0 +1,400 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  .smallads .spot { width: 88px !important; }
+  .backstage .spot { width: 177px; min-height: 122px !important; height: 122px; }
+
+  .backstage .spot:first-child,
+  .backstage .spot:nth-child(2),
+  .backstage .spot:nth-child(3) {
+	  margin-right: 5px;
+  }
+
+
+.cat_backstage_nextup_text {
+  margin-left: 0px;
+  width: 79%
+}
+
+.cat_backstage_toggle {
+  width: 100%;
+  margin-top: 8px;
+}
+
+  // Fixed grid
+  #grid > .core(@gridColumnWidth768, @gridGutterWidth768);
+
+  // Fluid grid
+  #grid > .fluid(@fluidGridColumnWidth768, @fluidGridGutterWidth768);
+
+  // Input grid
+  #grid > .input(@gridColumnWidth768, @gridGutterWidth768);
+
+  // No need to reset .thumbnails here since it's the same @gridGutterWidth
+
+  // Custom
+
+  #header {
+	  #header_logo {
+		  background-size: 140px 29px;
+      width: 140px;
+		  top: 29px;
+	  }
+  }
+
+  /* Tablet Menu */
+
+  #tablet_menu{
+    position: absolute;
+    right: 0px;
+    top: 46px;
+    background: @black;
+    border: none;
+    padding: 7px 5px 10px 10px;
+
+    .icon_bar{
+      display: block;
+      width: 18px;
+      height: 2px;
+      background-color: darken(@white,20%);
+      margin-top: 4px;
+    }
+
+    // &:before{
+    //   color: darken(@white,40%);
+    //   font-size: 11px;
+    //   content: " | ";
+    //   display: block;
+    //   position: absolute;
+    //   top: 8px;
+    //   left: -10px;
+    //   width: 1px;
+    //   height: 10px;
+    // }
+  }
+
+
+  #main_nav{
+
+  	#navwrap ul{
+
+      margin: 0 70px 0 0;
+
+  		li{
+        font-size: 14px;
+        a{
+          padding: 15px 50px 13px 12px;
+        }
+        ul {
+          padding: 0 0 0 15px;
+          margin: 0;
+          width: 90%;
+          li {
+            a {
+
+            }
+          }
+        }
+  		}
+
+      > li {
+        &:last-child a {
+          padding-right: 10px;
+        }
+
+        &:last-child:after{
+          content: "";
+        };
+      }
+  	}
+
+    #group_login_btn{
+
+      a{
+        padding: 15px 30px 13px;
+      }
+    }
+  }
+
+  #banner {
+    height: 340px;
+  }
+
+  .inner_slide{
+    > div.container {
+      margin-top: -170px;
+    }
+  }
+
+  #map{
+
+    h1{
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    p{
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    hr{
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .event_map {
+      // top: 60px;
+    }
+
+    #map_nav {
+      margin-top: -90px;
+    }
+
+    .map_content{
+      margin-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+
+  #current_location{
+    margin-top: 25px;
+  }
+
+  .slider_nav{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(38, 38, 38, .7);
+    background-size: 100%;
+    position: absolute;
+    top: 165px;
+    z-index: 1000;
+    width: 44px;
+    height: 80px;
+    display: block;
+  }
+
+  .entry_slider {
+    .slider_nav {
+      top: 180px;
+    }
+  }
+
+  .slider_nav_left{
+    background-image: url('/fw/img/nav_left.png');
+    left: 0;
+  }
+
+  .slider_nav_right{
+    background-image: url('/fw/img/nav_right.png');
+    right: 0;
+  }
+
+  #featured_entries{
+
+    h1{
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+
+  #basic_page {
+	  #ads {
+
+	  	.spot {
+		  	//min-height: 110px;
+		  	.inset {
+			  	padding: 10px;
+		  	}
+	  	}
+		  h3 {
+			  font-size: 14px;
+			  line-height: 18px;
+		  }
+
+		  p {
+			  font-size: 11px;
+			  line-height: 14px;
+		  }
+	  }
+  }
+
+  #footer{
+
+    #footer_nav{
+
+      li{
+        margin-right: 40px;
+      }
+    }
+  }
+
+  #register_btn a{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  // Event Page
+
+  #event_page {
+
+    #event_theme,
+    #conference_snapshot{
+      background-attachment: scroll;
+    }
+
+	  #event_logo{
+			width: 300px;
+		}
+
+    #header{
+      #header_logo{
+        top: 8px;
+      }
+    }
+
+		#events_nav {
+			nav {
+				width: 350px;
+			}
+		}
+
+    #speakers_panel{
+      ul{
+        li{
+          line-height: 18px;
+          a{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .event_speakers {
+	    h4 {
+		    a {
+			    padding: 5px;
+		    }
+	    }
+    }
+
+		.social_links {
+			width: 120px;
+		}
+
+    .social_links .social_link {
+      margin: 0 0 0 3px;
+    }
+
+    .event_btn {
+      min-width: 104px;
+    }
+
+    .snapshot_links{
+      .event_btn{
+        font-size: 21px;
+      }
+    }
+
+    #share_header {
+			width: 180px;
+			height: 65px;
+
+		}
+		#photo_gallery{
+      height: 148px;
+
+      .gallery_wrapper{
+        height: 148px;
+      }
+
+      .event_photo{
+        width: 188px;
+      }
+    }
+
+		#video_container {
+      height: 330px;
+    }
+    #video_overlay{
+      width: 100%;
+      height: 330px;
+      position: absolute;
+      top: 0;
+      background-size: 1100px;
+      background-position: center top;
+    }
+    #events_nav{
+      nav{
+        width: 550px;
+
+        li{
+          margin-right: -4px;
+        }
+      }
+    }
+    &.event_inside_page{
+      #page_title{
+        h1{
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  //Event Speakers
+
+  .individual_speaker {
+    .speaker_img {
+      .border-radius(50px) !important;
+      height: 100px !important;
+    }
+  }
+
+  //Sidebar Responsive Styles
+  #lab_topics {
+    a {
+      font-size: 30px;
+      width: 100% !important;
+      .box-sizing(border-box);
+    }
+  }
+
+  // Post Site
+
+  .post-site {
+    .container {
+      width: 886px !important;
+
+    }
+  }
+
+}
+
+// Post Site max-width 1200px responsive
+
+@media (max-width: 1200px) {
+
+// Post Site
+
+  .post-site {
+    .container {
+      width: 886px !important;
+
+    }
+
+    .realign {
+      display: block;
+    }
+
+    .realign-hide {
+      display: none;
+    }
+  }
+
+
+}

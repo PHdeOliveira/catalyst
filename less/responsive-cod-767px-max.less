@@ -1,0 +1,491 @@
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+
+
+@media (max-width: 767px) {
+
+  // Padding to set content in a bit
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  // Negative indent the now static "fixed" navbar
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  // Remove padding on container given explicit padding set on body
+  .container-fluid {
+    padding: 0;
+  }
+
+  // TYPOGRAPHY
+  // ----------
+  // Reset horizontal dl
+  .dl-horizontal {
+    dt {
+      float: none;
+      clear: none;
+      width: auto;
+      text-align: left;
+    }
+    dd {
+      margin-left: 0;
+    }
+  }
+
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+  .container {
+    width: auto;
+  }
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  .thumbnails > li {
+    float: none;
+    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+  }
+  // Make all grid-sized elements block level again
+  [class*="span"],
+  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    .box-sizing(border-box);
+  }
+  .span12,
+  .row-fluid .span12 {
+    width: 100%;
+    .box-sizing(border-box);
+  }
+  .row-fluid [class*="offset"]:first-child {
+		margin-left: 0;
+	}
+
+  // FORM FIELDS
+  // -----------
+  // Make span* classes full width
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    .input-block-level();
+  }
+  // But don't let it screw up prepend/append inputs
+  .input-prepend input,
+  .input-append input,
+  .input-prepend input[class*="span"],
+  .input-append input[class*="span"] {
+    display: inline-block; // redeclare so they don't wrap to new lines
+    width: auto;
+  }
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    position: fixed;
+    top:   20px;
+    left:  20px;
+    right: 20px;
+    width: auto;
+    margin: 0;
+    &.fade  { top: -100px; }
+    &.fade.in { top: 20px; }
+  }
+
+  // Custom
+
+  body{
+    padding-top: 0;
+  }
+
+  #header{
+    position: relative;
+    height: auto;
+  }
+
+  #header_wrapper{
+    top: 0;
+    height: 70px;
+  }
+
+  #logo{
+    position: relative;
+    width: 102px;
+    height: 50px;
+    background-size: 102px 50px;
+    top: 0;
+    margin: 10px 0;
+
+    a{
+      height: 50px;
+    }
+  }
+
+  #next_event{
+    position: relative;
+    bottom: auto;
+
+    p{
+      margin-right: 0;
+    }
+
+    .button{
+      position: relative;
+      right: auto !important;
+      top: auto;
+      margin: 10px 0 0 0;
+      display: block;
+    }
+  }
+
+  #cod_home{
+
+    #banner{
+      height: auto;
+
+      h1{
+        margin-top: 40px;
+      }
+
+      .background{
+        position: absolute;
+        top: 0 !important;
+        height: 100%;
+        margin-top: 0;
+
+        img{
+          left: 0;
+          margin: 0;
+          position: absolute;
+          height: 100% !important;
+          width: auto !important;
+        }
+      }
+
+      .free_download{
+        left: -20px;
+        bottom: auto;
+        margin-bottom: 20px;
+        position: relative;
+
+        .stretch{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .video_container{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .speaker_content{
+
+    img{
+      margin-bottom: 20px;
+    }
+  }
+
+  .slider_nav{
+    width: 28px;
+    height: 80px;
+  }
+
+  .photo_loader{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    img{
+      max-width: 100% !important;
+      max-height: 100% !important;
+      position: relative;
+      display: block;
+      width: auto;
+      height: auto;
+      // top: 50%;
+      // left: 50%;
+      // margin-top: -190px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .slider{
+    margin: 0 30px;
+
+    li{
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  #main_nav{
+    margin-top: 0;
+    top: 0;
+    padding-top: 0;
+    overflow: hidden;
+    height: 0;
+
+    ul{
+      text-align: left;
+      padding: 20px 0 30px;
+
+      li{
+        display: block;
+        margin-bottom: 15px;
+
+        a{
+          padding: 15px 8px 13px 0;
+        }
+      }
+    }
+  }
+
+  #site_nav{
+    overflow: hidden;
+    float: none;
+    top: 0;
+    height: 0;
+
+    ul{
+      padding: 10px 0;
+
+      li{
+        display: block;
+        margin: 0;
+
+        a{
+          padding: 5px 0;
+          display: block;
+        }
+      }
+
+      .hit{
+        display: none !important;
+      }
+
+      ul{
+        display: block;
+        margin-left: 15px;
+        background: none;
+        position: relative;
+        left: auto;
+        width: auto;
+        padding: 0;
+
+        li{
+
+          a{
+            font-family: @proximaRegular;
+            color: @codYellow;
+          }
+        }
+      }
+    }
+
+    .button{
+      display: inline-block;
+      padding: 10px 20px;
+    }
+  }
+
+  #details{
+
+    .item{
+      border: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  .dates{
+
+    li{
+
+      .date_content{
+        width: 100%;
+        float: none !important;
+      }
+
+      .button{
+        float: none !important;
+        display: block;
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+
+  .cod_inside_page{
+
+    #banner{
+      height: 150px;
+    }
+
+    #main{
+
+      header{
+        height: auto;
+
+        h2{
+          margin-bottom: 20px;
+        }
+
+        .register_info{
+          position: relative;
+          bottom: auto;
+        }
+      }
+    }
+  }
+
+  #sidebar{
+
+    .register_block{
+      margin-bottom: 30px;
+    }
+
+    .module{
+      margin-bottom: 20px;
+    }
+  }
+
+  #footer{
+    padding-bottom: 40px;
+
+    cite{
+      display: block;
+    }
+
+    .pull-right{
+      float: none;
+    }
+  }
+
+  #footer_nav{
+    float: none;
+    padding-bottom: 40px;
+
+    ul{
+      margin-bottom: 40px;
+
+      li{
+        display: block;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  #login_form{
+    position: absolute;
+    top: 60px;
+  }
+}
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+
+  // Smooth out the collapsing/expanding nav
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
+  }
+
+  // Block level the page header small tag for readability
+  .page-header h1 small {
+    display: block;
+    line-height: @baseLineHeight;
+  }
+
+  // Update checkboxes for iOS
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+
+  // Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  // Medias
+  // Reset float and spacing to stack
+  .media .pull-left,
+  .media .pull-right  {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  // Remove side margins since we stack instead of indent
+  .media-object {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    top:   10px;
+    left:  10px;
+    right: 10px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+
+  // Carousel
+  .carousel-caption {
+    position: static;
+  }
+
+}

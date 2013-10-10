@@ -1,0 +1,366 @@
+<div class="container">
+
+	<form id="form_search">
+
+		<i class="search_icon"></i>
+
+		<input type="text" id="search_query" class="search_query" value="" placeholder="Search">
+
+	</form>
+
+</div>
+
+<div id="featured_searches">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="span3">
+
+				<div class="search_nav" id="filter_controls">
+
+					<a href="#" id="featured_search_btn" class="tab_nav_btn first">Featured Searches</a>
+
+					<% if(cat.Options.screenType == 'phone' || cat.Options.screenType == 'desktop-small') { %>
+
+					<div id="featured_searches_set" style="height: 0;">
+
+						<ul>
+
+							<li><a href="#">Catalyst Conference</a></li>
+
+							<li><a href="#">Podcasts</a></li>
+
+							<li><a href="#">Leadership</a></li>
+
+							<li><a href="#">Andy Stanley</a></li>
+
+							<li><a href="#">Culture</a></li>
+
+							<li><a href="#">Christine Caine</a></li>
+
+							<li><a href="#">Books</a></li>
+
+							<li><a href="#">Church</a></li>
+
+							<li><a href="#">Brad Lomenick</a></li>
+
+							<li><a href="#">Leaders</a></li>
+
+							<li><a href="#">Pastor</a></li>
+
+							<li><a href="#">Team</a></li>
+
+						</ul>
+
+					</div>
+
+					<% } %>
+
+<!-- 					<a href="#" class="tab_nav_btn">Saved Searches</a> -->
+
+					<a href="#" class="tab_nav_btn" id="advanced_filter_btn">Advanced Filter</a>
+
+				</div>
+
+			</div>
+
+			<% if(cat.Options.screenType != 'phone' && cat.Options.screenType != 'desktop-small') { %>
+
+			<div id="featured_searches_set">
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Catalyst Conference</a></li>
+
+							<li><a href="#">Podcasts</a></li>
+
+							<li><a href="#">Leadership</a></li>
+
+							<li><a href="#">Andy Stanley</a></li>
+
+					</ul>
+
+				</div>
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Culture</a></li>
+
+							<li><a href="#">Christine Caine</a></li>
+
+							<li><a href="#">Books</a></li>
+
+							<li><a href="#">Church</a></li>
+
+					</ul>
+
+				</div>
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Brad Lomenick</a></li>
+
+							<li><a href="#">Leaders</a></li>
+
+							<li><a href="#">Pastor</a></li>
+
+							<li><a href="#">Team</a></li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<% } %>
+
+
+			<!-- <div id="saved_searches_set" style="display: none;">
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Catalyst Conference</a></li>
+
+						<li><a href="#">Podcasts</a></li>
+
+						<li><a href="#">Leadership</a></li>
+
+						<li><a href="#">Andy Stanley</a></li>
+
+					</ul>
+
+				</div>
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Sermons</a></li>
+
+						<li><a href="#">Small Group Material</a></li>
+
+						<li><a href="#">Resources</a></li>
+
+						<li><a href="#">Donald Miller</a></li>
+
+					</ul>
+
+				</div>
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Brad Lomenick</a></li>
+
+						<li><a href="#">Groupzines</a></li>
+
+						<li><a href="#">Books</a></li>
+
+						<li><a href="#">Recommended Reading</a></li>
+
+					</ul>
+
+				</div>
+
+			</div> -->
+
+		</div>
+
+	</div>
+
+</div>
+
+<!--
+<div class="container">
+
+	<div class="row">
+
+		<div class="span3">
+
+			<div id="filter_controls">
+
+				<a href="#" class="tab_nav_btn" id="advanced_filter_btn">Advanced Filter</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+-->
+
+<div id="filters" style="height: 0px;">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="span12">
+
+				<div class="search_help search_help_title">
+
+					<span>Maybe we can help your search.</span>
+
+				</div>
+
+				<div class="search_help inline_chosen">
+
+					<span>You're interested in <select data-placeholder="please select" id="categories" class="chzn-select hide" multiple>
+
+							<% for (c in categories) { var category = categories[c]; %>
+
+							<option value="<%= category.title %>"><%= category.title %></option>
+
+							<% } %>
+
+						</select></span>
+
+				</div>
+
+				<div class="search_help inline_chosen">
+
+					<span>As a Catalyst Leader, you are <select data-placeholder="please select" id="essentials" class="chzn-select inline_chosen hide" multiple>
+
+							<% for (e in essentials) { var essential = essentials[e]; %>
+
+							<option value="<%= essential.title %>"><%= essential.title %></option>
+
+							<% } %>
+
+						</select></span>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div id="advanced_filters">
+
+				<div class="span3">
+
+					<div class="dropdown_set">
+
+						<select data-placeholder="Media Type" id="mediatypes" class="chzn-select hide" multiple>
+
+							<% for (m in mediatypes) { var media = mediatypes[m]; %>
+
+							<option value="<%= media.title %>"><%= media.title %></option>
+
+							<% } %>
+
+						</select>
+
+					</div>
+
+				</div>
+
+				<div class="span3">
+
+					<div class="dropdown_set">
+
+						<select data-placeholder="Tags" id="tags" class="chzn-select hide" multiple>
+
+							<% for (t in tags) { var tag = tags[t]; %>
+
+							<option value="<%=tag.title%>"><%= tag.title %></option>
+
+							<% } %>
+
+						</select>
+
+					</div>
+
+				</div>
+
+				<div class="span3">
+
+					<div class="dropdown_set">
+
+						<select data-placeholder="Authors" id="authors" class="chzn-select hide" multiple>
+
+							<% for (a in authors) { var author = authors[a]; %>
+
+							<option value="<%=author.title%>"><%= author.title %></option>
+
+							<% } %>
+
+						</select>
+
+					</div>
+
+				</div>
+
+				<div class="span3">
+
+					<div class="dropdown_set">
+
+						<select data-placeholder="Viewing Time" id="viewtime" class="chzn-select hide" multiple>
+
+							<% for (v in viewtime) { var vt = viewtime[v]; %>
+
+							<option value="<%=vt.title%>"><%= vt.title %></option>
+
+							<% } %>
+
+						</select>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div id="filter_tags_wrapper">
+
+	<div id="filter_tags" style="height: 0px;">
+
+		<div class="search_wrapper">
+
+			<hr>
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="span8">
+
+						<div id="tag_container"></div>
+
+					</div>
+
+					<div class="span4">
+
+						<button type="button" class="save_btn">Login or Sign Up to Save Your Results</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

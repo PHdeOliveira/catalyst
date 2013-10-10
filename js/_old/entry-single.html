@@ -1,0 +1,474 @@
+
+
+	<article class="<%= content_media_type %>">
+
+		<!-- Article Header Info -->
+
+		<div id="article_header">
+
+			<% /* if(cat.Options.screenType != 'phone') { %>
+
+			<div id="header_img" class="full_img background_img parallax">
+
+				<img src="/fw/php/timthumb.php?/fw/img/article_header_placeholder.jpg&w=1600&h=600&q=85">
+
+			</div>
+
+			<% } */ %>
+
+			<div id="article_info">
+
+				<div class="close_article">
+
+					<div class="container">
+
+						<a href="#" class="close_article_btn">Close<i class="close_icon"></i></a>
+
+					</div>
+
+				</div>
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="span4">
+
+							<div id="article_share">
+
+								<!-- <a href="#" class="bookmark_btn"></a> -->
+
+								<h3>Share This</h3>
+
+								<div id="addthis_toolbox" class="social_links addthis_toolbox">
+
+									<a href="#" class="social_link facebook_link addthis_button_facebook"></a>
+
+									<a href="#" class="social_link twitter_link addthis_button_twitter"></a>
+
+		              <a href="#" class="social_link linkedin_link addthis_button_linkedin"></a>
+
+		            </div>
+
+		          </div>
+
+						</div>
+
+						<div class="span8">
+
+							<div class="entry_content_type">
+
+								<% if (content_media_type == 'Article' || content_media_type == 'Download') { %>
+
+								<i class="type_icon read"></i>
+
+								<% } else if(content_media_type == 'Audio' || content_media_type == 'Podcast') { %>
+
+								<i class="type_icon listen"></i>
+
+								<% } else if(content_media_type == 'Video' || content_media_type == 'Backstage') { %>
+
+								<i class="type_icon watch"></i>
+
+								<% } %>
+
+								<%= content_media_type %>
+
+							</div>
+
+							<header>
+
+								<h1><%= title %></h1>
+
+							</header>
+
+							<footer class="entry_authors">
+
+								<!-- Authors Playa -->
+
+								<cite><% if (content_author_alt) { %><%= content_author_alt %><% } else { %>Catalyst<% } %></cite>
+
+							</footer>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Author Info -->
+
+		<!-- <aside id="author_info" style="height: 0px;">
+
+			<div id="author_info_inner">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="span3">
+
+							<figure class="full_img">
+
+								<img src="/fw/img/author_thumb.jpg" alt="">
+
+							</figure>
+
+						</div>
+
+						<div class="span8 offset1">
+
+							<div class="author_info_content">
+
+								<h1>Brad Lomenick</h1>
+
+								<p>Aenean sollicitudin, lorem quis bibendum auctor nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+								<div class="author_links">
+
+									<a href="#" class="button author_link">Twitter</a>
+
+									<a href="#" class="button author_link">Facebook</a>
+
+									<a href="#" class="button author_link">Website</a>
+
+								</div>
+
+								<a href="#" class="close_btn">Close</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</aside> -->
+
+		<!-- Content -->
+
+		<div id="article_content">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="span3">
+
+						<!-- Sidebar -->
+
+						<% if(cat.Options.screenType != 'phone') { %>
+
+						<aside id="sidebar">
+
+<!--
+							<h3>Trending</h3>
+
+							<hr>
+
+							<div class="tweet">
+
+								<div>
+
+									<strong><span class="twitter_handle">Catalyst</span></strong> <a href="#">@CatalystLeader</a>
+
+								</div>
+
+								The leader's lack of self-awareness is the leader's greatest barrier. <a href="#">@craiggroeschel</a> <a href="#">#catalyst</a> via <a href="#">@ksgreenwood</a>
+
+							</div>
+-->
+
+<!--
+							<h3>Related Articles</h3>
+
+							<hr>
+
+							<div class="related_entries">
+
+								<article class="related_entry read">
+
+									<a href="#">
+
+										<div class="inset">
+
+											<header>
+
+												<h2>Proin gravida nibh vel velit auctor bibendum auctor, nisi elit consequat ipsum</h2>
+
+											</header>
+
+											<footer class="entry_authors">
+
+												<cite>Brad Lomenick</cite>
+
+											</footer>
+
+										</div>
+
+									</a>
+
+								</article>
+
+							</div>
+-->
+
+							<!--<h3>Sweet Deals</h3>
+
+							<hr>-->
+
+							<div class="spots">
+
+								<article class="spot">
+
+									<a href="http://www.catalystconference.com/atlanta">
+
+										<div class="inset">
+
+											<header>
+
+												<h3><span>Catalyst Atlanta 2013</span></h3>
+
+											</header>
+
+											<p>Stay tuned — speakers to be announced soon!</p>
+
+										</div>
+
+									</a>
+
+								</article>
+
+							</div>
+
+						</aside>
+
+						<% } %>
+
+					</div>
+
+					<div class="span8 offset1">
+
+						<!-- Main Article Content -->
+
+						<div id="main_content">
+
+							<!-- Article -->
+
+							<% if(content_media_type == "Article") { %>
+
+									<%= content_full_text %>
+
+									<%= content_footer %>
+
+							<% } %>
+
+							<!-- Audio -->
+
+							<% if(content_media_type == "Audio" || content_media_type == "Podcast") { %>
+
+									<% if ( content_media_s3.search(/mp3/gi) > 0) { %>
+
+										<div id="audio_s3">Loading...</div>
+
+									<% } else if (content_audio) { %>
+
+										<div id="audio_botr">Loading...</div>
+
+									<% } %>
+
+									<%= content_full_text %>
+
+									<%= content_footer %>
+
+								<% if(content_media_type == "Podcast") { %>
+
+								<div>
+
+									<a href="<%= content_media_s3 %>" class="button download_btn" target="_blank">Download</a>
+									<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?s=143441&id=130079836" target="_blank" class="button download_btn">iTunes</a>
+
+								</div>
+
+								<% } %>
+
+<!-- 								<span>File size 10 megabytes</span> -->
+
+							<% } %>
+
+							<!-- Video -->
+
+							<% if(content_media_type == "Video" || content_media_type == "Backstage") { %>
+
+									<% if ( content_video_botr ) { %>
+
+										<div id="video_botr">Loading...</div>
+
+									<% } else if ( content_media_s3.search(/mp4|mov|flv/gi) > 0) { %>
+
+										<div id="video_s3">Loading...</div>
+
+									<% } else if (content_video_alt) { %>
+
+										<div class="video_container">
+
+											<%= content_video_alt %>
+
+										</div>
+
+									<% } %>
+
+									<%= content_full_text %>
+
+							<% } %>
+
+							<div class="h20"></div>
+
+							<div id="addthis_toolbox2" class="social_links addthis_toolbox">
+
+								<span>Share This</span>
+
+								<a href="#" class="social_link facebook_link addthis_button_facebook"></a>
+
+								<a href="#" class="social_link twitter_link addthis_button_twitter"></a>
+
+	              <a href="#" class="social_link linkedin_link addthis_button_linkedin"></a>
+
+            	</div>
+
+							<hr>
+
+							<div class="comments">
+
+<!-- 								<h3>Comments</h3> -->
+
+								<div id="disqus_thread"></div>
+
+							</div>
+
+							<% if(cat.Options.screenType == 'phone') { %>
+
+								<aside id="sidebar">
+
+					<!--
+									<h3>Trending</h3>
+
+									<hr>
+
+									<div class="tweet">
+
+										<div>
+
+											<strong><span class="twitter_handle">Catalyst</span></strong> <a href="#">@CatalystLeader</a>
+
+										</div>
+
+										The leader's lack of self-awareness is the leader's greatest barrier. <a href="#">@craiggroeschel</a> <a href="#">#catalyst</a> via <a href="#">@ksgreenwood</a>
+
+									</div>
+					-->
+
+					<!--
+									<h3>Related Articles</h3>
+
+									<hr>
+
+									<div class="related_entries">
+
+										<article class="related_entry read">
+
+											<a href="#">
+
+												<div class="inset">
+
+													<header>
+
+														<h2>Proin gravida nibh vel velit auctor bibendum auctor, nisi elit consequat ipsum</h2>
+
+													</header>
+
+													<footer class="entry_authors">
+
+														<cite>Brad Lomenick</cite>
+
+													</footer>
+
+												</div>
+
+											</a>
+
+										</article>
+
+									</div>
+					-->
+
+									<!--<h3>Sweet Deals</h3>
+
+									<hr>-->
+
+									<div class="spots">
+
+										<article class="spot">
+
+									<a href="http://catalystleader.com/" target="_blank">
+
+										<div class="inset">
+
+											<header>
+
+												<h3><span>The Catalyst Leader Book</span></h3>
+
+											</header>
+
+											<p>Purchase The Catalyst Leader Book before May 5th & receive $600 of FREE resources.</p>
+
+										</div>
+
+									</a>
+
+								</article>
+
+								<article class="spot">
+
+									<a href="http://www.catalystconference.com/atlanta">
+
+										<div class="inset">
+
+											<header>
+
+												<h3><span>Catalyst Atlanta 2013</span></h3>
+
+											</header>
+
+											<p>Stay tuned — speakers to be announced soon!</p>
+
+										</div>
+
+									</a>
+
+								</article>
+
+									</div>
+
+								</aside>
+
+								<% } %>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>

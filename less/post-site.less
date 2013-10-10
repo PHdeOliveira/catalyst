@@ -1,0 +1,320 @@
+// Global
+
+li {
+	list-style: none;
+}
+
+p {
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+  display: block;
+}
+
+.realign {
+  display: none;
+}
+
+.realign-hide {
+  display: block;
+}
+
+.post-site {
+	background: @white !important;
+	padding: 84px 0 65px;
+
+	.container {
+		padding: 0 19px;
+		.box-sizing(border-box);
+	}
+}
+
+
+// Common
+
+.border-box {
+	.box-sizing(border-box);
+}
+
+
+// Twitter Styles
+
+.sm-twitter {
+	background-color: @tweet;
+	background-image: url('/img/twitterIcon.png');
+	background-repeat: no-repeat;
+	background-position: 7% 87%;
+
+	img {
+		display: table;
+		margin: 0 auto;
+	}
+	.twitter-container {
+		.box-sizing(border-box);
+		
+	}
+
+}
+
+.sm-fb {
+	background-color: @facebook;
+	background-image: url('/img/fbIcon.png');
+	background-repeat: no-repeat;
+	background-position: 7% 85%;
+}
+
+.last {
+	margin-right: 0 !important;
+}
+
+//Header
+
+#post-header {
+	display: table;
+	margin: 0 auto 4px;
+
+}
+
+//Body
+
+.sm {
+	width: 280px;
+	height: 156px;
+	margin: 0px 0 4px 0;
+	position: relative;
+	float: left;
+
+	.sm-text {
+		font-size: 11px;
+		line-height: 13px;
+		font-family: @avenir;
+		font-weight: 500;
+		color: @white;
+		padding: 26px 30px 0;
+		margin: 0 !important;
+	}
+
+	.sm-date {
+		position: absolute;
+		bottom: 18px;
+		right: 30px;
+		margin: 0 !important;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 13px;
+		font-family: @avenir;
+	}
+}
+
+.quote {
+	width: 564px;
+	height: 156px;
+	margin: 2px 0;
+	background: @quoteGreen;
+	float: left;
+	padding: 16px 20px 26px;
+	position: relative;
+	.box-sizing(border-box);
+
+	p {
+		font-family: @avenir;
+		font-size: 26px;
+		line-height: 30px;
+		font-weight: 500;
+		margin: 0;
+	}
+
+	.quote-author {
+		position: absolute;
+		bottom: 22px;
+		right: 21px;
+		font-weight: normal;
+	}
+
+}
+
+//Ads
+
+.ad {
+	width: 280px;
+	height: 156px;
+	margin: 0 0 4px;
+	float: left;
+}
+
+.tall-ad {
+	height: 312px !important;
+}
+
+.wide-ad {
+	width: 564px !important;
+
+}
+
+#vimeo {
+	max-width: 564px;
+	min-width: 564px;
+	max-height: 312px;
+	min-height: 312px;
+	overflow: hidden;
+	margin: 2px 0;
+}
+
+// Fontello
+
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/ps_fonts/fontello.eot?44363152');
+  src: url('fonts/ps_fonts/fontello.eot?44363152#iefix') format('embedded-opentype'),
+       url('fonts/ps_fonts/fontello.woff?44363152') format('woff'),
+       url('fonts/ps_fontsfontello.ttf?44363152') format('truetype'),
+       url('fonts/ps_fonts/fontello.svg?44363152#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?44363152#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-spin1:before { content: '\e800'; } /* '' */
+
+
+// Animated Loader
+
+.the-icons {
+	font-size: 30px;
+}
+
+.animate-spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: table;
+  margin: 60px auto;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+

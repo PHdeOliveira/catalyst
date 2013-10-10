@@ -1,0 +1,74 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .social_links .facebook_link {
+    background-image: url('/fw/img/facebook_icon_light@2x.png');
+  }
+  .social_links .twitter_link {
+    background-image: url('/fw/img/twitter_icon_light@2x.png');
+  }
+  .social_links .linkedin_link {
+    background-image: url('/fw/img/linkedin_icon_light@2x.png');
+  }
+  .social_links .instagram_link {
+    background-image: url('/fw/img/instagram_icon_light@2x.png');
+  }
+  .social_links .pinterest_link {
+    background-image: url('/fw/img/pinterest_icon_light@2x.png');
+  }
+  #article_share .social_links .facebook_link {
+    background-image: url('/fw/img/facebook_icon_dark@2x.png') !important;
+  }
+  #article_share .social_links .twitter_link {
+    background-image: url('/fw/img/twitter_icon_dark@2x.png') !important;
+  }
+  #article_share .social_links .linkedin_link {
+    background-image: url('/fw/img/linkedin_icon_dark@2x.png') !important;
+  }
+  #article_share .social_links .instagram_link {
+    background-image: url('/fw/img/instagram_icon_dark@2x.png') !important;
+  }
+  #article_share .social_links .pinterest_link {
+    background-image: url('/fw/img/pinterest_icon_dark@2x.png') !important;
+  }
+  .read {
+    background-image: url('/fw/img/read_icon@2x.png') !important;
+  }
+  .watch {
+    background-image: url('/fw/img/watch_icon@2x.png') !important;
+  }
+  .listen {
+    background-image: url('/fw/img/listen_icon@2x.png') !important;
+  }
+  .entry_info .entry_comments {
+    background-image: url('/fw/img/comment_icon@2x.png') !important;
+  }
+  .close_icon {
+    background-image: url('/fw/img/close_btn@2x.png');
+  }
+  .search_query {
+    background-image: url('/fw/img/icon_search@2x.png');
+  }
+  .slider_nav_left {
+    background-image: url('/fw/img/nav_left@2x.png');
+  }
+  .slider_nav_right {
+    background-image: url('/fw/img/nav_right@2x.png');
+  }
+  .map_pin {
+    background-image: url('/fw/img/map_pin_blue@2x.png');
+  }
+  .map_pin.active {
+    background-image: url('/fw/img/map_pin@2x.png');
+  }
+  .nav_arrow {
+    background-image: url('/fw/img/nav_arrow@2x.png');
+  }
+  .map_pin_icon {
+    background-image: url('/fw/img/map_pin@2x.png');
+  }
+  #change_location .close_btn {
+    background-image: url('/fw/img/close_btn@2x.png');
+  }
+  .caret {
+    background-image: url('/fw/img/search_nav_arrow@2x.png');
+  }
+}

@@ -1,0 +1,36 @@
+body.cke_show_borders {  }
+
+/*
+    You can define new styles for basic elements such as h1, h2, p, ul etc that
+    will be used in the Wyvern field, and resemble how it displays on the front
+    end of your site. The styles will not be selectable unless they are added
+    to wysiwyg.js
+*/
+
+img.float_left { float: left; margin: 5px 20px 10px 0; }
+img.float_right { float: right; margin: 5px 0 10px 20px; }
+
+p.left { float: left; }
+p.right { float: right; }
+
+body.cke_show_borders ul { list-style-type: disc; margin: 0 0 20px; padding-left:12px; font-size: 12px; line-height:20px; font-family: Arial, Helvetica, sans-serif; }
+body.cke_show_borders ul > li { margin-bottom: 10px;  }
+
+ul.georgia_list, .georgia_list { list-style-type: disc; margin: 0 0 25px; padding-left:15px; font-size: 14px; line-height:22px; font-family: Georgia, 'Times New Roman', Times, serif; }
+ul.georgia_list > li {  }
+
+ul.arial_list, .arial_list { list-style-type: disc; margin: 0 0 25px; padding-left:15px; font-size: 12px; line-height:20px; font-family: Arial, Helvetica, sans-serif; }
+ul.arial_list > li { margin-bottom:10px;  }
+
+.arial { font-size: 12px; line-height:19px; font-family: Arial, Helvetica, sans-serif; }
+.georgia { font-size: 14px; line-height:22px; font-family: Georgia, 'Times New Roman', Times, serif; }
+.lightGrey {color:#a2a2a2;}
+.mediumGrey { color:#5b5b5b; }
+.darkerGrey {color:#868686;}
+
+body.cke_show_borders p { font-size: 14px; line-height:22px; font-family: Georgia, 'Times New Roman', Times, serif; }
+body.cke_show_borders .section_header, .section_header { font-size:21px; line-height:31px; font-family: Georgia, 'Times New Roman', Times, serif;}
+
+body.cke_show_borders p, body.cke_show_borders .section_header { text-align: left !important; width: auto !important; margin: 0 0 15px 0 !important; }
+
+.clear { clear: both; }

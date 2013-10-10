@@ -1,0 +1,31 @@
+<% if(ads_internal_link) { %>
+
+<a href="<%= ads_internal_link %>" class="spot_link">
+
+<% } else { %>
+
+<a href="<%= ads_external_link %>" class="spot_link" target="_blank">
+
+<% } %> 
+
+	<div class="entry_info">
+
+		<div class="entry_content_type"></div>
+
+	</div>
+
+	<div class="inset">
+
+		<header>
+
+			<h3 class="textfill"><span><%= title %></span></h3>
+
+		</header>
+
+		<hr>
+
+		<%= ads_description %>
+
+	</div>
+
+</a>

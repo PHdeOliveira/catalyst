@@ -1,0 +1,154 @@
+//
+// Responsive: Large desktop and up
+// --------------------------------------------------
+
+
+@media (min-width: 1200px) {
+
+  .smallads .spot { width: 140px !important; }
+.backstage .spot { width: 285px; height:197px; float: left; margin-bottom: 30px !important; }
+
+.backstage .spot:first-child,
+.backstage .spot:nth-child(2),
+.backstage .spot:nth-child(3) {
+	margin-right: 10px;
+}
+
+  // Fixed grid
+  #grid > .core(@gridColumnWidth1200, @gridGutterWidth1200);
+
+  // Fluid grid
+  #grid > .fluid(@fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
+
+  // Input grid
+  #grid > .input(@gridColumnWidth1200, @gridGutterWidth1200);
+
+  // Thumbnails
+  .thumbnails {
+    margin-left: -@gridGutterWidth1200;
+  }
+  .thumbnails > li {
+    margin-left: @gridGutterWidth1200;
+  }
+  .row-fluid .thumbnails {
+    margin-left: 0;
+  }
+
+  // Custom
+
+  #header_logo{
+    width: 200px;
+    height: 42px;
+    background-size: 200px 42px;
+    top: 26px;
+  }
+
+  #main_nav{
+    ul{
+      li{
+        font-size: 16px;
+        line-height: 16px;
+        a{
+          padding: 18px 40px 13px 40px;
+        }
+      }
+    }
+  }
+
+  #map {
+    .event_map {
+      // top: 60px;
+    }
+
+    #map_nav {
+      margin-top: -150px;
+    }
+  }
+
+  .inner_slide{
+    > div.container {
+      margin-top: -160px;
+    }
+  }
+
+  #basic_page {
+	  #ads {
+	  	.spot {
+		  	//min-height: 110px;
+		  	.inset {
+			  	padding: 26px;
+		  	}
+	  	}
+		  h3 {
+			  font-size: 28px;
+			  line-height: 30px;
+		  }
+
+		  p {
+			  font-size: 13px;
+			  line-height: 18px;
+		  }
+	  }
+  }
+
+  .individual_speaker {
+    .speaker_img {
+      .border-radius(90px) !important;
+      height: 170px !important;
+    }
+  }
+
+
+  #lab_topics {
+    a {
+      font-size: 30px;
+      width: 38.3% !important;
+    }
+  }
+
+  #event_page {
+  	#video_container {
+	  	height: 480px;
+  	}
+	  #video_overlay{
+			width: 100%;
+			height: 480px;
+			position: absolute;
+			top: 0;
+			background-size: 1720px;
+			background-position: center top
+		}
+
+		.social_links{
+			//width: 260px;
+		}
+
+    #photo_gallery{
+      height: 280px;
+
+      .gallery_wrapper{
+        height: 280px;
+      }
+
+      .event_photo{
+        width: 330px;
+      }
+    }
+    &.event_inside_page{
+      .sidebar_list{
+        ul{
+          li{
+            a{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+
+	}
+
+  
+
+}

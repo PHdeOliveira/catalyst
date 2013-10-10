@@ -1,0 +1,131 @@
+<div class="container">
+
+	<div id="form_search">
+
+		<div class="loader" style="display: none;"></div>
+		<div class="clear_search" style="display: none;"></div>
+		<i class="search_icon"></i>
+
+		<input type="text" id="search_query" class="search_query" value="" placeholder="Search">
+
+	</div>
+
+</div>
+
+<div id="featured_searches">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="span3">
+
+				<div class="search_nav" id="filter_controls">
+
+					<a id="featured_search_btn" class="tab_nav_btn first">Featured Searches<i class="caret"></i></a>
+
+					<% if(cat.Options.screenType == 'phone' || cat.Options.screenType == 'desktop-small') { %>
+
+					<div id="featured_searches_set" style="height: 0;">
+
+						<ul>
+
+							<li><a href="#">Catalyst Conference</a></li>
+
+							<li><a href="#">Podcast</a></li>
+
+							<li><a href="#">Leadership</a></li>
+
+							<li><a href="#">Andy Stanley</a></li>
+
+							<li><a href="#">Culture</a></li>
+
+							<li><a href="#">Christine Caine</a></li>
+
+							<li><a href="#">Books</a></li>
+
+							<li><a href="#">Church</a></li>
+
+							<li><a href="#">Brad Lomenick</a></li>
+
+							<li><a href="#">Leaders</a></li>
+
+							<li><a href="#">Pastor</a></li>
+
+							<li><a href="#">Team</a></li>
+
+						</ul>
+
+					</div>
+
+					<% } %>
+
+<!-- 					<a href="#" class="tab_nav_btn">Saved Searches</a> -->
+
+					<!-- <a href="#" class="tab_nav_btn" id="advanced_filter_btn">Advanced Filter</a> -->
+
+				</div>
+
+			</div>
+
+			<% if(cat.Options.screenType != 'phone' && cat.Options.screenType != 'desktop-small') { %>
+
+			<div id="featured_searches_set">
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Catalyst Conference</a></li>
+
+							<li><a href="#">Podcast</a></li>
+
+							<li><a href="#">Leadership</a></li>
+
+							<li><a href="#">Andy Stanley</a></li>
+
+					</ul>
+
+				</div>
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Culture</a></li>
+
+							<li><a href="#">Christine Caine</a></li>
+
+							<li><a href="#">Books</a></li>
+
+							<li><a href="#">Church</a></li>
+
+					</ul>
+
+				</div>
+
+				<div class="span3">
+
+					<ul>
+
+						<li><a href="#">Brad Lomenick</a></li>
+
+							<li><a href="#">Leaders</a></li>
+
+							<li><a href="#">Pastor</a></li>
+
+							<li><a href="#">Team</a></li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<% } %>
+
+		</div>
+
+	</div>
+
+</div>

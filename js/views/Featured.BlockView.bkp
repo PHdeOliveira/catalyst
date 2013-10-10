@@ -1,0 +1,52 @@
+// Filename: views/Featured.BlockView.js
+
+var App = App || {};
+
+// Post Entry View
+// ---------------
+
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  'models/Entry',
+  'text!templates/featured-block.html'
+], function($, _, Backbone, Entry, featuredBlockTpl){
+
+  App.Views.Featured.BlockView = Backbone.View.extend({
+    tagName: 'div',
+    className: 'slide_item',
+    template: _.template( featuredBlockTpl ),
+    
+    initialize: function() {
+	       
+    },
+    
+    events: {
+      'click': 'single'
+    },
+    
+    render: function() {
+    
+      this.$el.addClass(this.model.get('content_media_type')).html( this.template( this.model.toJSON() ));
+
+      return this;
+    },
+    
+    show: function(slug) {
+
+	    this.$el.append( this.render(post).el );
+	    
+    },
+
+    single: function() {
+      var singleEntry = new EntrySingleView({ model: this.model });
+      $('#home_content').after( singleEntry.render().el );
+      singleEntry.show();
+    }
+    
+  });
+
+  return App.Views.Featured.BlockView;
+  
+});

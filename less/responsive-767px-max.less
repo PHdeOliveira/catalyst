@@ -1,0 +1,973 @@
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+
+
+@media (max-width: 767px) {
+
+	.largeads .spot { width: 280px !important; }
+	.smallads .spot { width: 135px !important; }
+
+  // Padding to set content in a bit
+  .container {
+    padding-left:20px;
+    padding-right: 20px;
+  }
+  // Negative indent the now static "fixed" navbar
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  // Remove padding on container given explicit padding set on body
+  .container-fluid {
+    padding: 0;
+  }
+
+  // TYPOGRAPHY
+  // ----------
+  // Reset horizontal dl
+  .dl-horizontal {
+    dt {
+      float: none;
+      clear: none;
+      width: auto;
+      text-align: left;
+    }
+    dd {
+      margin-left: 0;
+    }
+  }
+
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+  .container {
+    width: auto;
+  }
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  .thumbnails > li {
+    float: none;
+    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+  }
+  // Make all grid-sized elements block level again
+  [class*="span"],
+  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    .box-sizing(border-box);
+  }
+  .span12,
+  .row-fluid .span12 {
+    width: 100%;
+    .box-sizing(border-box);
+  }
+  .row-fluid [class*="offset"]:first-child {
+		margin-left: 0;
+	}
+
+  // FORM FIELDS
+  // -----------
+  // Make span* classes full width
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    .input-block-level();
+  }
+  // But don't let it screw up prepend/append inputs
+  .input-prepend input,
+  .input-append input,
+  .input-prepend input[class*="span"],
+  .input-append input[class*="span"] {
+    display: inline-block; // redeclare so they don't wrap to new lines
+    width: auto;
+  }
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    position: fixed;
+    top:   20px;
+    left:  20px;
+    right: 20px;
+    width: auto;
+    margin: 0;
+    &.fade  { top: -100px; }
+    &.fade.in { top: 20px; }
+  }
+
+  // Custom
+
+  #admin{
+    margin-top: 0;
+  }
+
+  #header{
+    position: relative;
+  }
+
+  .entry_slider{
+    //width: 100%;
+  }
+
+  .background_img{
+
+    img{
+      width: 100% !important;
+      left: 0;
+      margin-left: 0px;
+    }
+  }
+
+  #entries,
+  #search_entries{
+    width: 100% !important;
+    .entry_slider{
+      .swiper-wrapper {
+        padding-left: 35px;
+        .swiper-slide{
+          &.important{
+            width: 250px;
+
+            h3{
+              width: 200px;
+            }
+            .front,
+            .back{
+              margin: 0 5px;
+              width: 96%;
+            }
+          }
+
+          // margin: 0 5px;
+          h3,
+          .entry_authors,
+          .entry_links{
+            // width: 190px;
+          }
+          h3{
+            // line-height: 190%;
+          }
+          p{
+            font-size: 13px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+
+
+    /*.slide_item{
+      width: 240px !important;
+    }
+    .slide_window{
+      width: 240px !important;
+    }*/
+  }
+
+  #filters {
+    margin: 0px 0;
+  }
+
+  #content_filter {
+    padding:0;
+  }
+
+  #header{
+    position: relative;
+    height: auto;
+  }
+
+  #banner_holder{
+    margin-top: 0;
+    height: auto;
+  }
+
+  #main > div{
+    padding-top: 0;
+  }
+
+  #banner{
+    position: relative;
+    min-height: 300px;
+    height: 300px;
+    .inner_slide{
+      min-height: 300px;
+      height: 300px;
+    }
+    .banner_item{
+      h1{
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+  }
+
+  /* Phone Nav */
+
+  #phone_nav{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: @black;
+    border: none;
+    padding: 12px 5px 4px 10px;
+
+    .icon_bar{
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: @white;
+      margin-bottom: 6px;
+    }
+  }
+
+  #header_logo{
+    position: relative;
+    margin: 10px 0 10px 0;
+    width: 47px;
+    height: 40px;
+    left: 0;
+    top: 0;
+    background-image: url('/fw/img/cat_mark.png') !important;
+    background-size: 47px 40px;
+  }
+
+
+
+  .nav_arrow{
+    top: 50px;
+  }
+
+  #current_location{
+    margin-top: 15px;
+  }
+
+  #map{
+    .event_map{
+      position: absolute;
+      left: -9999px;
+    }
+    .map_content{
+      margin-top: 70px;
+      h1{
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 0;
+      }
+      p{
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    hr{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  #header_inner{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    height: auto;
+  }
+
+  .filter_text{
+    display: block !important;
+    float: none;
+    text-align: center;
+  }
+
+  .dropdown_set{
+    margin: 10px auto;
+  }
+
+  .p10{
+    padding: 0;
+  }
+
+  .dropdown_set{
+    float: none;
+  }
+
+  #social{
+    h3{
+      margin-top: 40px;
+    }
+  }
+
+  #social_list {
+    display: none;
+  }
+
+  #social_feed{
+    overflow-y: auto;
+    height: auto;
+  }
+
+  #social_feed_wrapper{
+    // margin-top:
+    padding: 20px 0;
+  }
+
+  #featured_entries{
+    height: 220px;
+    h1{
+      font-size: 28px;
+      line-height: 32px;
+      margin: 0;
+    }
+    .slide_wrapper{
+      height: 220px;
+      .slide_item{
+        height: 220px;
+      }
+    }
+  }
+
+  #form_search{
+    margin: 20px 35px 0 0;
+  }
+
+  #featured_searches_set{
+    overflow: hidden;
+    ul{
+      margin: 20px 0 0 0;
+    }
+  }
+
+  #footer{
+    padding-bottom: 40px;
+    .align-right{
+      text-align: left;
+    }
+  }
+
+  #footer_nav{
+    ul{
+      margin-bottom: 40px;
+      li{
+        display: block;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  #single_article,
+  .basic_page,
+  #basic_page{
+    padding-top: 0;
+    h1{
+      font-size: 28px !important;
+      line-height: 32px !important;
+    }
+    #sidebar{
+      margin: 0;
+      padding: 0;
+      float: left;
+      padding-top: 15px;
+    }
+    &.active{
+      margin-top: 0;
+    }
+    #article_share{
+      position: relative;
+      margin-bottom: 10px;
+      h3{
+        margin: 20px 0 10px;
+        display: none;
+      }
+      #article_share{
+        position: relative;
+        margin-bottom: 10px;
+      }
+    }
+    .close_article_btn{
+      position: relative;
+      z-index: 100;
+    }
+
+    .social_links{
+      margin: 15px 0 0;
+    }
+
+    .entry_content_type{
+      margin: 15px 0 !important;
+    }
+  }
+
+  #main_content{
+    padding: 30px 0 !important;
+    .social_links{
+      margin-top: 30px;
+    }
+  }
+
+  .h20,
+  .h40,
+  .h60{
+    height: 20px;
+  }
+
+  // Page Templates
+
+  .basic_page{
+    #article_info{
+      padding: 0;
+      h1{
+        margin: 40px 0 20px;
+      }
+    }
+    #main_content{
+      padding: 30px 0;
+    }
+  }
+
+  // Responsive Nav
+
+  #main_nav,
+  #events_nav nav{
+    margin-top: 0;
+    top: 0;
+    padding-top: 0;
+    overflow: hidden;
+    height: 0;
+
+    #navwrap{
+      position: relative;
+    }
+
+    #navwrap ul{
+      text-align: left;
+      padding: 20px 0 10px 10px;
+      position: static;
+      height: 160px;
+      // margin: 0;
+
+      li{
+        // font-size: 13px;
+        display: block;
+        margin-bottom: 20px;
+        height: auto;
+        position: static;
+
+        ul {
+          left: 140px;
+          top: 10px;
+          padding: 10px 0 10px 10px;
+          width: 50%;
+          position: absolute;
+          display: none;
+
+          li {
+            margin-bottom: 0px;
+            height: 26px;
+            a {
+              padding: 0;
+            }
+          }
+
+          &.active{
+            display: block;
+          }
+        }
+
+        a{
+          padding: 15px 8px 13px 0;
+        }
+
+        &:after{
+          content: "";
+        }
+      }
+
+      > li {
+        &:last-child a {
+          padding-right: 8px !important;
+        }
+      }
+    }
+
+    #login_btn,
+    #register_btn{
+      margin: 5px 0 20px 10px;
+      display: block;
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+
+      a{
+        text-transform: uppercase;
+        font-family: @proximaBold;
+        padding: 8px 16px 6px;
+        font-size: 12px;
+        line-height: 12px;
+        .border-radius(5px);
+        .transition(all .1s);
+
+        &:hover{
+          color: @catGrayLight;
+          background-color: @catGray;
+        }
+      }
+
+      &.logged_in{
+
+        a{
+          background-color: none;
+          background: url('/fw/img/login_btn_arrow.png') right center no-repeat;
+          text-transform: none;
+          color: @catRed;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          span{
+            font-family: @proximaBold;
+            text-transform: uppercase;
+            -webkit-font-smoothing: antialiased;
+          }
+        }
+      }
+    }
+    #login_btn {
+      a {
+        background-color: @white;
+        color: @black;
+      }
+    }
+
+    #register_btn {
+      a {
+        background-color: @catRed;
+        color: @white;
+      }
+    }
+  }
+
+
+
+  // Events
+
+  #event_page{
+    padding-top: 0 !important;
+
+    .slider_nav{
+      width: 28px;
+    }
+
+    .photo_loader{
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+
+      img{
+        max-width: none !important;
+        left: 50%;
+        // margin-left: -50%;
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .event_photos_wrapper{
+      margin-left: 28px;
+    }
+
+    #lab_sessions_list li{
+      width: 50%;
+    }
+
+    #event_theme,
+    #conference_snapshot{
+      background-attachment: scroll;
+    }
+
+    #header_inner{
+      .align-right{
+        text-align: left !important;
+        padding: 0 20px;
+      }
+    }
+
+    #events_nav{
+      .align-right{
+        text-align: left !important;
+      }
+    }
+
+    #speakers_panel{
+      ul{
+        li{
+          line-height: 18px;
+          a{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .snapshot_tab_btn{
+      margin-bottom: 10px;
+    }
+
+    .snapshot_link_btn{
+      display: block;
+      margin-left: 0 !important;
+    }
+
+    #footer{
+      .footer_credits{
+        cite{
+          margin-bottom: 10px;
+          display: block;
+        }
+      }
+      .contact_info{
+        margin-top: 20px;
+        .contact_phone{
+          margin: 0;
+        }
+      }
+    }
+
+    &.event_inside_page{
+      #page_title{
+        margin-top: 20px;
+        h1{
+          font-size: 30px;
+        }
+      }
+      #page_subnav{
+        ul{
+          li{
+            padding: 5px;
+            display: block;
+            margin: 0;
+
+            a{
+              float: none;
+            }
+          }
+        }
+      }
+    }
+
+    #events_nav{
+      .event_btn{
+        color: @white !important;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        display: inline-block !important;
+      }
+      nav{
+        width: auto !important;
+        margin: 0 20px !important;
+        ul{
+          margin: 0 !important;
+          padding-bottom: 20px;
+          li{
+            display: block;
+            a{
+              float: none;
+            }
+          }
+        }
+      }
+    }
+
+    .speaker_header{
+      display: block;
+      height: auto;
+      .speaker_photo{
+        float: none;
+        margin-bottom: 20px;
+      }
+      hgroup{
+        float: none;
+        padding-left: 0;
+        height: auto;
+      }
+    }
+  }
+
+
+
+  #event_logo{
+    margin:  0 20px 20px 20px;
+  }
+
+  //Event Speakers Styles
+
+  .individual_speaker {
+    width: 45%;
+    margin-right: 5%;
+    float: left;
+
+    .speaker_img {
+      width: 100%;
+      height: auto !important;
+      .border-radius(50%) !important;
+      margin: 0 auto 10px !important;
+
+    }
+  }
+
+  #individual_speaker:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  //Speakers Sidebar Styles
+
+  #lab_topics {
+    a {
+      font-size: 30px;
+      width: 100% !important;
+      .box-sizing(border-box);
+    }
+
+  }
+
+  #share_header, #register_wrap {
+	  display: none;
+  }
+
+  #event_page {
+
+	  #event_banner {
+		  img {
+			  display:block;
+			  margin: 0 auto;
+			}
+	  }
+
+	  .event_photos{
+			height: 100px;
+		}
+
+		.event_photos_wrapper{
+			height: 100px;
+
+			.event_photo{
+				width: 100px;
+				height: 100px;
+
+			}
+		}
+
+
+		#video_container {
+	  	height: 200px;
+		}
+
+	  #video_overlay{
+			width: 100%;
+			height: 200px;
+			background-size: 660px;
+			background-position: center top;
+		}
+  }
+
+}
+
+
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+
+  // Smooth out the collapsing/expanding nav
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
+  }
+
+  // Block level the page header small tag for readability
+  .page-header h1 small {
+    display: block;
+    line-height: @baseLineHeight;
+  }
+
+  // Update checkboxes for iOS
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+
+  // Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  // Medias
+  // Reset float and spacing to stack
+  .media .pull-left,
+  .media .pull-right  {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  // Remove side margins since we stack instead of indent
+  .media-object {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    top:   10px;
+    left:  10px;
+    right: 10px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+
+  // Carousel
+  .carousel-caption {
+    position: static;
+  }
+
+  //Event Speakers Styles
+  #individual_speaker {
+    width: 100%;
+  }
+
+  // Event Page
+
+  #event_page {
+
+  	#known_search {
+
+  		padding: 30px 0 0;
+	  	h1 {
+	    	font-size: 38px;
+	  	}
+	  	h2 {
+		  	font-size: 22px;
+	  	}
+
+	  	#search_form {
+		  	margin-bottom: 0;
+		  	padding-left: 10px;
+
+		  	.search_icon {
+			  	background-size: 80%;
+		  	}
+
+		  	input {
+			  	margin-bottom: 0;
+			  	font-size: 20px;
+			  	padding-left: 40px;
+		  	}
+	  	}
+  	}
+
+  	#refresh_tweets {
+  		padding: 10px 0 15px;
+  		text-align: center;
+
+  		#refresh_btn {
+	  		margin: 8px 0 0px;
+  		}
+
+	  	span {
+		  	font-size: 16px;
+	  	}
+  	}
+
+	  #header_inner {
+			text-align: center;
+	  }
+
+	  #event_logo{
+			width: 280px;
+			float: none;
+			margin: 0px auto 15px;
+		}
+
+		#events_nav {
+			.container { padding: 0; }
+			nav {
+				margin: 0 auto;
+				float: none;
+				ul { margin: 0 0 0 8px; }
+				li {
+					a {
+						padding: 10px 10px;
+					}
+				}
+				width: 320px;
+			}
+		}
+
+		.event_photos{
+			height: 100px;
+		}
+
+		.event_photos_wrapper{
+			height: 100px;
+
+			.event_photo{
+				width: 100px;
+				height: 100px;
+
+			}
+		}
+
+
+		#video_container {
+	  	height: 138px;
+		}
+
+	  #video_overlay{
+			width: 100%;
+			height: 138px;
+			background-size: 450px;
+			background-position: center top;
+		}
+	}
+
+	#basic_page {
+		padding-top: 0;
+	}
+
+}

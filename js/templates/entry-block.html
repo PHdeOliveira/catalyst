@@ -1,0 +1,147 @@
+<div class="front" ondragstart="return false">
+
+	<div class="entry_info">
+
+		<div class="entry_content_type">
+
+			<% if (content_media_type == 'Article' || content_media_type == 'Download') { %>
+
+			<i class="type_icon read"></i>
+
+			<% } else if(content_media_type == 'Audio' || content_media_type == 'Podcast') { %>
+
+			<i class="type_icon listen"></i>
+
+			<% } else if(content_media_type == 'Video' || content_media_type == 'Backstage') { %>
+
+			<i class="type_icon watch"></i>
+
+			<% } %>
+
+		</div>
+
+		<div class="entry_comments">
+
+			<span><%= socialCount() %></span>
+
+		</div>
+
+<% if (content_security == 'Exclusive Content') { %>
+
+		<div class="entry_premium">
+
+			<span>Exclusive<br>Content</span>
+
+		</div>
+
+<% } %>
+
+	</div>
+
+	<div class="inset">
+
+		<header>
+
+			<h3 class="textfill"><span><%= title %></span></h3>
+
+		</header>
+
+		<footer class="entry_authors">
+
+			<cite><% if (content_authors.length > 0) { %><%= content_authors[0].title %><% } else if (content_author_alt) { %><%= content_author_alt %><% } else { %>Catalyst<% } %></cite>
+
+		</footer>
+
+	</div>
+
+	<div class="image_fade" <% if (content_image.length > 0) { %>style="background-image: url(<% if (content_important !== 'important') { print(content_image[0].s3_url_card) } else { print(content_image[0].s3_url_standard) } %>)"<% } %>>
+
+	</div>
+
+</div>
+
+<div class="back" ondragstart="return false">
+
+	<!-- <div class="entry_info">
+
+		<div class="entry_content_type"></div>
+
+	</div> -->
+
+	<div class="inset">
+
+		<div class="contain"><%= content_teaser %></div>
+
+		<% if(content_media_type == "Article") { %>
+			<a href="/read/<%= url_title %>/" class="entry_link">Read</a>
+		<% } %>
+
+		<!-- Audio -->
+
+		<% if(content_media_type == "Audio" || content_media_type == "Podcast") { %>
+			<a href="/listen/<%= url_title %>/" class="entry_link">Listen</a>
+		<% } %>
+
+		<!-- Video -->
+
+		<% if(content_media_type == "Video" || content_media_type == "Backstage") { %>
+			<a href="/watch/<%= url_title %>/" class="entry_link">Watch</a>
+		<% } %>
+
+		<div class="entry_links">
+
+			<div class="links_inset">
+
+				<div class="entry_comments">
+
+					<a href="#" class="comments_btn">
+						<span><%= commentCount() %></span>
+					</a>
+
+					<span>Comments</span>
+
+				</div>
+
+				<% for(t in tags.viewing_time) {
+
+						var time = tags.viewing_time[t];
+
+						if(time) { %>
+
+							<div class="entry_time">
+
+								<div class="time_btn"><span><% var smalltime = time.replace(/minutes/i,''); print(smalltime); %></span></div>
+
+								<span>Minutes</span>
+
+							</div>
+
+						<% } %>
+
+				<% } %>
+
+				<!-- <div class="entry_bookmark">
+
+					<a href="#" class="bookmark_btn"></a>
+
+					<span>Bookmark</span>
+
+				</div> -->
+
+				<!-- <div class="entry_rate">
+
+					<a href="#" class="rate_btn rate_plus" ondragstart="return false">+</a>
+
+					<a href="#" class="rate_btn rate_minus" ondragstart="return false">&ndash;</a>
+
+					<span>Rate It</span>
+
+				</div> -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

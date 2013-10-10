@@ -1,0 +1,213 @@
+// VARIABLES
+@import "variables.less";
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+// Transitions
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+
+// WUFOO
+form.wufoo { width: 95% !important }
+
+.wufoo label { margin: -8px 0 15px 0 }
+
+.wufoo #logo, 
+.wufoo #header {
+	display:none !important;
+}
+
+.wufoo input.field,
+.wufoo select.select,
+.wufoo textarea {
+	background-color: @catGrayBg !important;
+    color: #000 !important;
+	border: none !important;
+	text-align: left !important;
+	padding: 8px 14px !important;
+	font-size: 14px !important;
+	line-height: normal !important;
+	font-family: @proximaBold !important;
+	margin-bottom: 10px !important;
+	.border-radius(4px) !important;
+	.box-shadow(none) !important;
+
+	&:focus{
+		outline: none !important;
+		.box-shadow(none) !important;
+	}
+}
+
+.wufoo input.checkbox_field{
+	display: inline-block !important;
+	margin: -2px 0 0 5px !important;
+}
+
+.wufoo label.desc{
+	display: inline-block !important;
+    margin-bottom: -2px !important;
+}
+
+.wufoo input.submit,
+.wufoo button{
+	width: auto !important;
+	cursor: pointer !important;
+	-webkit-appearance: button;
+	font-family: "Proxima Nova Bold", helvetica, arial, sans-serif !important;
+	font-size: 12px !important;
+	letter-spacing: 1px !important;
+	text-transform: uppercase !important;
+	text-align: center !important;
+	padding: 8px 20px !important;
+	border: none !important;
+	-webkit-font-smoothing: antialiased !important;
+	-webkit-border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	-webkit-transition: background-color 0.1s !important;
+	-moz-transition: background-color 0.1s !important;
+	-o-transition: background-color 0.1s !important;
+	transition: background-color 0.1s !important;
+	background-color: #c0c0c0 !important;
+}
+
+.wufoo input.submit:hover,
+.wufoo button:hover {
+	background-color: darken(#c0c0c0, 10%) !important;
+}
+
+.wufoo li.error {
+    margin-top: -8px !important;
+	background-color: transparent !important;
+}
+
+.wufoo li.error label,
+form li.error span.symbol { color: #959494 !important }
+
+.wufoo #errorLi {
+	background-color: transparent !important;
+	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+}
+
+.wufoo #errorMsg {
+	color: #fff !important;
+}
+
+.wufoo #errorMsg b {
+	background-color: transparent !important;
+}
+
+.wufoo label.choice { margin: -26px 5px 0 20px !important }
+
+.wufoo li.complex div span.left,
+.wufoo li.complex div span.right { width: 45% !important }
+
+.wufoo div span.left,
+div span.right { width: 45% !important }
+
+.wufoo li.leftHalf,
+.wufoo li.rightHalf { width: 45% !important }
+
+.wufoo .likert label { margin-top: 5px !important }
+
+select,
+input[type="file"] {
+    height: 32px !important;
+    line-height: 32px !important;
+}
+
+.wufoo button.link { text-decoration: none !important }
+
+.wufoo .buttons button,
+.wufoo .buttons button:hover { color: #959494 !important }
+
+.likert tbody tr:hover td,
+.likert tbody tr:hover th,
+.likert tbody tr:hover label { background-color: #bbbbbb !important }
+
+.wufoo li.leftThird,
+.wufoo li.middleThird,
+.wufoo li.rightThird { width: 28% !important }
+
+.wufoo li.leftThird,
+.wufoo li.middleThird { margin-right: 20px !important }
+
+/* Catalyst Europe Wufoo */
+form#form249 {
+  padding: 0px !important;
+}
+
+#form249 {
+  clear: left !important;
+  font: 14px Helvetica, Arial, sans-serif !important;
+}
+
+#form249 input.field {
+  border: 0px none !important;
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+  font-size: 25px !important;
+  line-height: 30px !important;
+  -webkit-border-radius: 01px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  padding: 15px !important;
+  width: 95% !important;
+  background-color: #fff !important;
+  color: #dfdfdf !important;
+}
+
+#form249 input.field:focus {
+  color: #7e7e7e !important;
+}
+
+#form249 #errorLi { display: none !important; }
+
+#form249 p.error { display: none !important; }
+
+#form249 .error input.field {
+	border: 3px solid red !important;
+}
+
+/*#europeform input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus{box-shadow:0 0 0 #68c9d3;-webkit-box-shadow: 0 0 0 #68c9d3;  -moz-box-shadow: 0 0 0 #68c9d3;}*//*firefox fix*/
+
+#form249 label.desc, #form249 .buttons { display: none !important; }
+
+#form249 .wufoo input::-webkit-input-placeholder {
+  color: #dfdfdf;
+}
+/* WebKit browsers */
+#form249 .wufoo input:-moz-placeholder {
+  color: #dfdfdf;
+}
+/* Mozilla Firefox 4 to 18 */
+#form249 .wufoo input::-moz-placeholder {
+  color: #dfdfdf;
+}
+/* Mozilla Firefox 19+ */
+#form249 .wufoo input:-ms-input-placeholder {
+  color: #dfdfdf;
+}
+/* Internet Explorer 10+ */
