@@ -86,7 +86,7 @@ JQTWEET = {
             }   
  
         });
- 
+      console.log(data);
     }, 
      
          
