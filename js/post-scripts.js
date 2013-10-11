@@ -14,8 +14,10 @@ var msnry = new Masonry( container, {
   gutter: 4
 });
 
-$(document).ready(function(){
-	JQTWEET.loadTweets();
+$(function () {
+    // start jqtweet!
+    var jqtweet = JQTWEET.loadTweets();
+    console.dir(jqtweet);
 });
 
 
