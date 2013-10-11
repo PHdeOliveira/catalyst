@@ -197,9 +197,5 @@ JQTWEET = {
 
 });
 
-$(function () {
-    // start jqtweet!
-    var jqtweet = JQTWEET.loadTweets();
-    console.dir(jqtweet);
-});
+
 
