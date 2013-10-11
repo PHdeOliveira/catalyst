@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Post Site</title>
+	<title>Catalyst Atlanta</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 	<body class="post-site">
