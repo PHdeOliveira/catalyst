@@ -36,7 +36,7 @@ JQTWEET = {
 
         $.ajax({
             url: '/php/twitterAuth.php',
-            type: 'POST',
+            type: 'GET',
             dataType: 'json',
             data: request,
             success: function(data, textStatus, xhr) {
