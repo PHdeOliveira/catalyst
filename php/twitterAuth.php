@@ -1,4 +1,4 @@
-<?
+<?php
 //We use already made Twitter OAuth library
 //https://github.com/mynetx/codebird-php
 require_once ('codebird.php');
@@ -10,8 +10,8 @@ $ACCESS_TOKEN = '17952072-u3Ix12de1Y6rS1Xp2NXKOI04PSODvp3N13BfZllDK';
 $ACCESS_TOKEN_SECRET = 'mAEiPjuTF2dPo5RviTzhvtDhAZ2eXQHVSpIFqnH2Bc';
 
 //Get authenticated
-\Codebird\Codebird::setConsumerKey($CONSUMER_KEY, $CONSUMER_SECRET);
-$cb = \Codebird\Codebird::getInstance();
+Codebird\Codebird::setConsumerKey($CONSUMER_KEY, $CONSUMER_SECRET);
+$cb = Codebird\Codebird::getInstance();
 $cb->setToken($ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
 //retrieve posts
