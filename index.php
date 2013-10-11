@@ -6,8 +6,6 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 	<body class="post-site">
-		
-		<?php require('/php/twitterauth.php'); require_once('/php/twitterauth.php'); ?>
 
 		<div id="jstwitter"></div>
 
