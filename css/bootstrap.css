@@ -5500,6 +5500,9 @@ p {
   position: relative;
   float: left;
 }
+.sm a {
+  display: inline-block;
+}
 .sm .sm-text {
   font-size: 11px;
   line-height: 13px;
