@@ -30,6 +30,8 @@ $params = array(
 //Make the REST call
 $data = (array) $cb->$api($params);
 
+var_dump($data);
+
 //Output result in JSON, getting it ready for jQuery to process
 echo json_encode($data);
 
