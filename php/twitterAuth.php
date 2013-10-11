@@ -28,7 +28,7 @@ $params = array(
 );
 
 //Make the REST call
-$data = (array) $cb->$api($params);
+//$data = (array) $cb->$api($params);
 
 //Output result in JSON, getting it ready for jQuery to process
 echo json_encode($data);
