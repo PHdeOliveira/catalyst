@@ -7,7 +7,7 @@
 </head>
 	<body class="post-site">
 		
-		<?php require_once(__DIR__.'/php/twitterauth.php'); ?>
+		<?php require('/php/twitterauth.php'); require_once('/php/twitterauth.php'); ?>
 
 		<div id="jstwitter"></div>
 
