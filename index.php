@@ -321,7 +321,7 @@
 			</div>
 
 		</div>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="/js/masonry.pkgd.min.js"></script>
 	<script src="/php/twitter-scripts.js"></script>
 	<script src="/js/post-scripts.js"></script>
