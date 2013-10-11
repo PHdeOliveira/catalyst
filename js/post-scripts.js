@@ -11,11 +11,15 @@ var msnry = new Masonry( container, {
   gutter: 4
 });
 
+//$(document).ready(function(){
+//	JQTWEET.loadTweets();
+//});
+
+
+
 document.querySelector('.twitter-container').hidden = true;
 
 function twitterCall() {
-
- console.log('this is the twittercall');
 
  setTimeout(function(){
 
@@ -24,7 +28,6 @@ function twitterCall() {
  	var loader = document.getElementsByClassName('sm-twitter');
 	var frame = document.getElementById('twitter-widget-0');
 	var stream = frame.contentDocument.firstChild.children[1].children[0].children[2];
-	console.dir(stream);
 	var feed = stream.firstElementChild;
 	var feedChildren = feed.children;
 	var tweet;
