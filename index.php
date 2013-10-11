@@ -7,6 +7,8 @@
 </head>
 	<body class="post-site">
 
+		<div id="jstwitter"></div>
+
 		<div class="container">
 			<div id="post-header">
 				<img src="img/header_image.jpg" alt="header image">
