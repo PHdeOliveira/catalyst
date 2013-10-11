@@ -329,6 +329,7 @@
 		$(function () {
 		    // start jqtweet!
 		    JQTWEET.loadTweets();
+		    console.log(JQTWEET);
 		    
 		});
 		</script>
