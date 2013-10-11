@@ -23,7 +23,7 @@
 
 				<div class="twitter-container">
 
-					<a class="twitter-timeline" href="https://twitter.com/twitterapi" data-widget-id="385848764910407680" width="280" height="156" data-chrome="noheader nofooter transparent noborders noscrollbar" data-tweet-limit="5">Tweets by @twitterapi</a>
+					<a class="twitter-timeline" href="https://twitter.com/CatalystLeader" data-widget-id="385848764910407680" width="280" height="156" data-chrome="noheader nofooter transparent noborders noscrollbar" data-tweet-limit="5"></a>
 
 
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -80,8 +80,8 @@
 			<!-- /End Row 2 -->
 
 			<div class="sm sm-fb item">
-				<p class="sm-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-				<p class="sm-date">Sept 16</p>
+				<p class="sm-text">Today is the last day to get the best pricing for <a href="http://facebook.com/hashtag/catalyst">#Catalyst</a> One Day in Chicago with @craiggroeschel & @andystanley!</p>
+				<p class="sm-date">11 OCT</p>
 
 			</div>
 
@@ -146,8 +146,8 @@
 			</div>
 
 			<div class="sm sm-fb item">
-				<p class="sm-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-				<p class="sm-date">Sept 16</p>
+				<p class="sm-text">Sometimes You Win, Sometimes You Learn by @JohnCMaxwell is out today. It’s a great read! <a href="http://bit.ly/GCKZOD">http://bit.ly/GCKZOD</a> <a href="http://facebook.com/hashtag/sywsyl">#sywsyl</a></p>
+				<p class="sm-date">11 OCT</p>
 
 			</div>
 
@@ -196,8 +196,8 @@
 			</div>
 
 			<div class="sm sm-fb item">
-				<p class="sm-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-				<p class="sm-date">Sept 16</p>
+				<p class="sm-text">And on this altar known as love, You made an orphan child a son. @JohnnySwim</p>
+				<p class="sm-date">9 OCT</p>
 
 			</div>
 

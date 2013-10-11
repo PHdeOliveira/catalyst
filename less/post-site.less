@@ -8,8 +8,12 @@ p {
 	-webkit-font-smoothing: antialiased;
 }
 
-a {
-  display: block;
+.ad {
+
+  a {
+    display: block;
+  }
+
 }
 
 .realign {
@@ -81,7 +85,7 @@ a {
 .sm {
 	width: 280px;
 	height: 156px;
-	margin: 0px 0 4px 0;
+	margin: 0px 0 4px;
 	position: relative;
 	float: left;
 
@@ -111,7 +115,7 @@ a {
 .quote {
 	width: 564px;
 	height: 156px;
-	margin: 2px 0;
+	margin: 0 0 4px;
 	background: @quoteGreen;
 	float: left;
 	padding: 16px 20px 26px;
@@ -159,7 +163,13 @@ a {
 	max-height: 312px;
 	min-height: 312px;
 	overflow: hidden;
-	margin: 2px 0;
+	margin: 0 0 4px;
+
+  #vimeo-container {
+    iframe {
+      border: 0;
+    }
+  }
 }
 
 // Fontello
