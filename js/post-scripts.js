@@ -14,10 +14,14 @@ var msnry = new Masonry( container, {
   gutter: 4
 });
 
+
+var request;
+
 $.ajax({
 	type: 'POST',
 	url: '/php/twitterAuth.php',
 	datatype: 'jsonp',
+	data: request,
 	success: function(data) {
 		console.log(data);
 	}
