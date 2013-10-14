@@ -22,9 +22,9 @@ $api = $_POST['api'];
 //https://dev.twitter.com/docs/api/1.1/get/statuses/user_timeline
 //https://dev.twitter.com/docs/api/1.1/get/search/tweets
 $params = array(
-'screen_name' => $q,
+'screen_name' => 'twitterapi',
 'q' => $q,
-'count' => $count
+'count' => '8'
 );
 
 //Make the REST call
