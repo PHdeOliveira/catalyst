@@ -3,7 +3,7 @@
 
 require_once("twitteroauth-master/twitteroauth/twitteroauth.php"); //Path to twitteroauth library
  
-$twitteruser = "twitterapi";
+$twitteruser = "CatalystLeader";
 $notweets = 8;
 $consumerkey = "bPvvSHs35JWI9SlvUJ84Q";
 $consumersecret = "d65u2W8nwSvmkOkkFQKmNGSFWWHEiOV2aalOW7s31M";
