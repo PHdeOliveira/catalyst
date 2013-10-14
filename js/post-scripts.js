@@ -15,24 +15,11 @@ var msnry = new Masonry( container, {
 });
 
 
-// var request;
-
-// $.ajax({
-// 	type: 'POST',
-// 	url: '/php/twitterAuth.php',
-// 	datatype: 'jsonp',
-// 	data: request,
-// 	success: function(data) {
-// 		console.log(data);
-// 	}
-
-
-// });
 
 $(function () {
     // start jqtweet!
     JQTWEET.loadTweets();
-    console.log(JQTWEET);
+    console.log(data);
     
 });
 
