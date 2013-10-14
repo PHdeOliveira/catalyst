@@ -61,18 +61,18 @@ $(function () {
 		// displayCounter++;
 		// 		}
 		// 	}
-	}
-});
+		}
+	});
 
 	console.log(tweetResults);
-		console.log(container);
+	console.log(container);
 
-		console.dir(tweetResults);
-		console.dir(container);
+	console.dir(tweetResults);
+	console.dir(container);
 
 	for (var t = 0; t < container.length; t++) {
 		
-		container[t].replaceChild(tweetResults[t],container[t].firstElementChild);
+		container[t].replaceChild(tweetResults[t],container[t]);
 	}
 
 	//Function modified from Stack Overflow
