@@ -1,7 +1,7 @@
 
 <?php
 
-require_once("/twitteroauth-master/twitteroauth/twitteroauth.php"); //Path to twitteroauth library
+require_once("twitteroauth-master/twitteroauth/twitteroauth.php"); //Path to twitteroauth library
  
 $twitteruser = "twitterapi";
 $notweets = 8;
