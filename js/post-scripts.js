@@ -18,7 +18,7 @@ var msnry = new Masonry( container, {
 $.ajax({
 	type: 'POST',
 	url: '/php/twitterAuth.php',
-	datatype: 'jsonp',
+	datatype: 'json',
 	jsonpCallback: 'getTweets',
 	success: function(data) {
 		console.log(data);
