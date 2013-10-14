@@ -38,12 +38,7 @@ $(function () {
 	}
 	
 
-	for (var t = 0; t < container.length; t++) {
-
-		tweetResults[t].setAttribute('class', 'h-entry with-expansion  customisable-border');
-		
-		container[t].replaceChild(tweetResults[t],container[t].firstElementChild);
-	}
+	console.log(tweetResults);
 
 });
 
