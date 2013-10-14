@@ -73,7 +73,7 @@ function addlinks(data) {
 data = data.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
 return '<a href="'+url+'" >'+url+'</a>';
 });
- 
+
 //Add link to @usernames used within tweets
 data = data.replace(/\B@([_a-z0-9]+)/ig, function(reply) {
 return '<a href="http://twitter.com/'+reply.substring(1)+'" style="font-weight:lighter;" >'+reply.charAt(0)+reply.substring(1)+'</a>';
