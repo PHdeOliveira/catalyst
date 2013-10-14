@@ -14,20 +14,20 @@ var msnry = new Masonry( container, {
   gutter: 4
 });
 
-// var request;
+var request;
 
 
-// $.ajax({
-// 	type: 'POST',
-// 	url: '/php/twitterAuth.php',
-// 	datatype: 'json',
-// 	data: request,
-// 	success: function(data) {
-// 		console.log(data);
-// 	}
+$.ajax({
+	type: 'POST',
+	url: '/php/twitter.php',
+	datatype: 'json',
+	data: request,
+	success: function(data) {
+		console.log(data);
+	}
 
 
-// });
+});
 
 
 document.querySelector('.twitter-container').hidden = true;
