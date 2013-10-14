@@ -15,16 +15,6 @@ var msnry = new Masonry( container, {
 });
 
 
-// $(function () {
-//     // start jqtweet!
-//     JQTWEET.loadTweets();
-//     console.log(JQTWEET);
-    
-// });
-
-
-
-
 document.querySelector('.twitter-container').hidden = true;
 
 function twitterCall() {
