@@ -1,7 +1,7 @@
 // JQuery Twitter Feed. Coded by www.webdevdoor.com (2012) and modified from https://twitter.com/javascripts/blogger.js
 $(document).ready(function () {
  
-    var displaylimit = 1;
+    var displaylimit = 8;
     var twitterprofile = "twitterapi";
     var screenname = "Sara Jane Jackson";
     var showdirecttweets = false;
