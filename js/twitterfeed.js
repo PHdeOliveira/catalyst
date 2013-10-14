@@ -67,6 +67,7 @@ $(document).ready(function () {
             }
  
             $('#jstwitter').html(feedHTML);
+
     });
  
     //Function modified from Stack Overflow
