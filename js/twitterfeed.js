@@ -30,7 +30,7 @@ var status = feeds[i].text;
 var isaretweet = false;
 var isdirect = false;
 var tweetid = feeds[i].id_str;
- 
+
 //If the tweet has been retweeted, get the profile pic of the tweeter
 if(typeof feeds[i].retweeted_status != 'undefined'){
 profileimage = feeds[i].retweeted_status.user.profile_image_url_https;
@@ -80,7 +80,7 @@ return '<a href="http://twitter.com/'+reply.substring(1)+'" style="font-weight:l
 });
 return data;
 }
- 
+
 function relative_time(time_value) {
 var values = time_value.split(" ");
 time_value = values[1] + " " + values[2] + ", " + values[5] + " " + values[3];
@@ -89,7 +89,7 @@ var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
 var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
 var shortdate = time_value.substr(4,2) + " " + time_value.substr(0,3);
 delta = delta + (relative_to.getTimezoneOffset() * 60);
- 
+
 if (delta < 60) {
 return '1m';
 } else if(delta < 120) {
