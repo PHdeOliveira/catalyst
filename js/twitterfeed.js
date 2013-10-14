@@ -9,11 +9,11 @@ $(function () {
 	var showtweetlinks = true;
 	var showprofilepic = false;
 
-	$.getJSON('/php/get-tweets.php',
-	function(feeds) {
+	$.getJSON('/php/get-tweets.php', function(feeds) {
 		//alert(feeds);
 		var feedHTML = '';
 		var displayCounter = 1;
+
 		for (var i=0; i<feeds.length; i++) {
 
 			var tweetscreenname = feeds[i].user.name;
@@ -49,10 +49,10 @@ $(function () {
 			feedHTML;
 		}
 
-		feedHTML += '<div class="twitter-article">';
+		
 		
 		feedHTML += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/'+tweetusername+'" >'+tweetscreenname+'</a></strong> <a href="https://twitter.com/'+tweetusername+'" >@'+tweetusername+'</a></span><span class="tweet-time"><a href="https://twitter.com/'+tweetusername+'/status/'+tweetid+'">'+relative_time(feeds[i].created_at)+'</a></span><br/>'+status+'</p></div>';
-		feedHTML += '</div>';
+
 		displayCounter++;
 				}
 			}
