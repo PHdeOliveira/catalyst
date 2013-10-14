@@ -38,9 +38,9 @@ $(function () {
 	}
 	
 
+	$('#jstwitter').html(feedHTML);
+
 });
-
-
 
 	//Function modified from Stack Overflow
 	function addlinks(data) {
