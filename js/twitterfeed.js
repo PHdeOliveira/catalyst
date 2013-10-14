@@ -17,7 +17,7 @@ $(function () {
 		var displayCounter = 1;
 
 		for (var i=0; i<feeds.length; i++) {
-
+			var tweet = feeds[i];
 			var tweetscreenname = feeds[i].user.name;
 			var tweetusername = feeds[i].user.screen_name;
 			var profileimage = feeds[i].user.profile_image_url_https;
@@ -25,7 +25,7 @@ $(function () {
 			var isaretweet = false;
 			var isdirect = false;
 			var tweetid = feeds[i].id_str;
-			var tweet = feeds[i];
+			
 
 		//If the tweet has been retweeted, get the profile pic of the tweeter
 		// if(typeof feeds[i].retweeted_status != 'undefined'){
