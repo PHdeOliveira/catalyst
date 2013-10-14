@@ -15,6 +15,19 @@ var msnry = new Masonry( container, {
 });
 
 
+$.ajax({
+	type: 'POST',
+	url: '/php/twitterAuth.php',
+	datatype: 'jsonp',
+	jsonpCallback: 'getTweets',
+	success: function(data) {
+		console.log(data);
+	}
+
+
+});
+
+
 document.querySelector('.twitter-container').hidden = true;
 
 function twitterCall() {
