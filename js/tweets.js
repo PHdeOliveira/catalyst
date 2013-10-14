@@ -7,7 +7,7 @@ var data = "?count=2&screen_name=twitterapi";
 $.ajax({
 	type: 'GET',
 	url: url + data,
-	datatype: 'jsonp'
+	datatype: 'jsonp',
 	jsonpCallback: 'getTweets'
 
 
