@@ -20,6 +20,25 @@ function buildAuthorizationHeader($oauth) {
 
 $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 
+$oauth = array(
+        'screen_name' => 'DwightHoward',
+        'count' => 2,
+        'oauth_consumer_key' => $consumer_key,
+        'oauth_nonce' => time(),
+        'oauth_signature_method' => 'HMAC-SHA1',
+        'oauth_token' => $oauth_access_token,
+        'oauth_timestamp' => time(),
+        'oauth_version' => '1.0'
+        );
+
+$options = array(
+            CURLOPT_HTTPHEADER => $header,
+            //CURLOPT_POSTFIELDS => $postfields,
+            CURLOPT_HEADER => false,
+            CURLOPT_URL => $url . '?screen_name=DwightHoward&count=2', 
+            CURLOPT_RETURNTRANSFER => true, CURLOPT_SSL_VERIFYPEER => false
+            );
+
 $oauth_access_token = "17952072-iJVdfsOa3d9WDqPfDCEB60JwWcd8GU2xKF1E1f676";
 $oauth_access_token_secret = "SpzXpqz3k8uiyaD6MiqyB7YSU7tvumoxHTeFaENv1w";
 $consumer_key = "0boIP4GDjUT0QqwT5e4w";
