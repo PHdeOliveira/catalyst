@@ -40,7 +40,7 @@ $(function () {
 
 	console.log(tweetResults);
 
-});
+
 
 	//Function modified from Stack Overflow
 	function addlinks(data) {
