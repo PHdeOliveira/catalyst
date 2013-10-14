@@ -4,10 +4,10 @@
 require_once ('codebird.php');
 
 //Twitter OAuth Settings
-$CONSUMER_KEY = '0boIP4GDjUT0QqwT5e4w';
-$CONSUMER_SECRET = 'yGSUyxq7COPuTJyzS5pmdLF3fvHbixGQt0pS0Xi0';
-$ACCESS_TOKEN = '17952072-iJVdfsOa3d9WDqPfDCEB60JwWcd8GU2xKF1E1f676';
-$ACCESS_TOKEN_SECRET = 'SpzXpqz3k8uiyaD6MiqyB7YSU7tvumoxHTeFaENv1w';
+$CONSUMER_KEY = 'bPvvSHs35JWI9SlvUJ84Q';
+$CONSUMER_SECRET = 'd65u2W8nwSvmkOkkFQKmNGSFWWHEiOV2aalOW7s31M';
+$ACCESS_TOKEN = '17952072-faR3g4EjzboyR1XllgrxnFMKQDxzFYCVyxhVinliw';
+$ACCESS_TOKEN_SECRET = 'yHCPqCIfVuZrdv7hvBjb5PZmCflr1dPU2jIARJ2nWIw';
 
 //Get authenticated
 Codebird\Codebird::setConsumerKey($CONSUMER_KEY, $CONSUMER_SECRET);
