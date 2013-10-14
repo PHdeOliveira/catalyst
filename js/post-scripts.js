@@ -101,7 +101,7 @@ function vimeoLoad() {
 
 
 function load() {
-	twitterCall();
+	// twitterCall();
 	vimeoLoad();
 }
 
