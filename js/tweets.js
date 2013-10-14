@@ -1,19 +1,14 @@
 //Tweets
 
-
-var url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
-var data = "?count=2&screen_name=twitterapi";
-
 $.ajax({
-	type: 'GET',
-	url: url + data,
+	type: 'POST',
+	url: 'https://api.twitter.com/1.1/statuses/user_timeline.json',
 	datatype: 'jsonp',
-	jsonpCallback: 'getTweets'
+	jsonpCallback: 'getTweets',
+	success: function(data) {
+		console.log(data);
+	}
 
 
 });
 
-function getTweets(r) {
-
-	console.log(r);
-}
