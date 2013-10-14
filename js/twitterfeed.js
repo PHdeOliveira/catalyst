@@ -11,7 +11,7 @@ var showprofilepic = true;
 
 var headerHTML = '';
 var loadingHTML = '';
-   
+
 headerHTML += '<h1>'+screenname+' <span style="font-size:13px"><a href="https://twitter.com/'+twitterprofile+'" >@'+twitterprofile+'</a></span></h1>';
 loadingHTML += '<div id="loading-container"><img src="img/ajax-loader.gif" width="32" height="32" alt="tweet loader" /></div>';
 
@@ -107,5 +107,5 @@ return shortdate;
 return shortdate;
 }
 }
- 
+
 });
