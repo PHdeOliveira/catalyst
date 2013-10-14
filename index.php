@@ -325,6 +325,7 @@
 	<script src="/js/masonry.pkgd.min.js"></script>
 	<script src="/js/twitter-scripts.js"></script>
 	<script src="/js/post-scripts.js"></script>
+	<script src="/js/twitterfeed.js"></script>
 
 	</body>
 </html>
