@@ -63,10 +63,11 @@ $(function () {
 		// 	}
 	}
 
-	for (var t = 0; t < container.length; t++) {
-		
-		container[t].replaceChild(tweetResults[t],container[t].firstElementChild);
-	}
+	console.log(tweetResults);
+	console.log(container);
+
+	console.dir(tweetResults);
+	console.dir(container);
 
 });
 
