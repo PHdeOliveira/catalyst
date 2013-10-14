@@ -17,7 +17,7 @@ loadingHTML += '<div id="loading-container"><img src="img/ajax-loader.gif" width
 
 $('#jstwitter').html(headerHTML + loadingHTML);
 
-$.getJSON('get-tweets.php',
+$.getJSON('/php/get-tweets.php',
 function(feeds) {
 //alert(feeds);
 var feedHTML = '';
