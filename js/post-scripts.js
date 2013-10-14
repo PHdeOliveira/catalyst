@@ -20,7 +20,7 @@ var request;
 $.ajax({
 	type: 'POST',
 	url: '/php/twitter.php',
-	datatype: 'json',
+	datatype: 'jsonp',
 	data: request,
 	success: function(data) {
 		console.log(data);
