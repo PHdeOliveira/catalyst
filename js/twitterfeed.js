@@ -8,7 +8,6 @@ $(function () {
 	var showretweets = true;
 	var showtweetlinks = true;
 	var showprofilepic = false;
-	var container = document.getElementsByClassName('twitter-container');
 	var tweetResults = [];
 
 	$.getJSON('/php/get-tweets.php', function(feeds) {
@@ -25,18 +24,41 @@ $(function () {
 			var isaretweet = false;
 			var isdirect = false;
 			var tweetid = feeds[i].id_str;
-			
+			var tweet = feeds[i];
 
+		//If the tweet has been retweeted, get the profile pic of the tweeter
+		if(typeof feeds[i].retweeted_status != 'undefined'){
+			profileimage = feeds[i].retweeted_status.user.profile_image_url_https;
+			tweetscreenname = feeds[i].retweeted_status.user.name;
+			tweetusername = feeds[i].retweeted_status.user.screen_name;
+			tweetid = feeds[i].retweeted_status.id_str
+			isaretweet = true;
+		};
+
+		//Check to see if the tweet is a direct message
+		if (feeds[i].text.substr(0,1) == "@") {
+			isdirect = true;
+		}
+		//console.log(feeds[i]);
+
+		if (((showretweets == true) || ((isaretweet == false) && (showretweets == false))) && ((showdirecttweets == true) || ((showdirecttweets == false) && (isdirect == false)))) {
+			if ((feeds[i].text.length > 1) && (displayCounter <= displaylimit)) {
+				if (showtweetlinks == true) {
+			status = addlinks(status);
+		}
+
+		if (displayCounter == 1) {
+			feedHTML;
+		}
+
+		
 		
 		feedHTML += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/'+tweetusername+'" >'+tweetscreenname+'</a></strong> <a href="https://twitter.com/'+tweetusername+'" >@'+tweetusername+'</a></span><span class="tweet-time"><a href="https://twitter.com/'+tweetusername+'/status/'+tweetid+'">'+relative_time(feeds[i].created_at)+'</a></span><br/>'+status+'</p></div>';
 
 		displayCounter++;
-
-		tweetResults.push(feedHTML);
-		
-		}
+				}
+			}
 	}
-	
 
 	$('#jstwitter').html(feedHTML);
 
