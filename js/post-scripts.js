@@ -18,7 +18,6 @@ $.ajax({
 	type: 'POST',
 	url: '/php/twitterAuth.php',
 	datatype: 'jsonp',
-	data: data,
 	success: function(data) {
 		console.log(data);
 	}
