@@ -9,58 +9,53 @@ $(function () {
 	var showtweetlinks = true;
 	var showprofilepic = false;
 
-	var loadingHTML = '';
-
-	loadingHTML += '<div id="loading-container"><img src="img/ajax-loader.gif" width="32" height="32" alt="tweet loader" /></div>';
-
-	$('#jstwitter').html(headerHTML + loadingHTML);
-
 	$.getJSON('/php/get-tweets.php',
 	function(feeds) {
 		//alert(feeds);
 		var feedHTML = '';
 		var displayCounter = 1;
 		for (var i=0; i<feeds.length; i++) {
-		var tweetscreenname = feeds[i].user.name;
-		var tweetusername = feeds[i].user.screen_name;
-		var profileimage = feeds[i].user.profile_image_url_https;
-		var status = feeds[i].text;
-		var isaretweet = false;
-		var isdirect = false;
-		var tweetid = feeds[i].id_str;
 
-	//If the tweet has been retweeted, get the profile pic of the tweeter
-	if(typeof feeds[i].retweeted_status != 'undefined'){
-		profileimage = feeds[i].retweeted_status.user.profile_image_url_https;
-		tweetscreenname = feeds[i].retweeted_status.user.name;
-		tweetusername = feeds[i].retweeted_status.user.screen_name;
-		tweetid = feeds[i].retweeted_status.id_str
-		isaretweet = true;
-	};
+			var tweetscreenname = feeds[i].user.name;
+			var tweetusername = feeds[i].user.screen_name;
+			var profileimage = feeds[i].user.profile_image_url_https;
+			var status = feeds[i].text;
+			var isaretweet = false;
+			var isdirect = false;
+			var tweetid = feeds[i].id_str;
 
-	//Check to see if the tweet is a direct message
-	if (feeds[i].text.substr(0,1) == "@") {
-		isdirect = true;
-	}
-	//console.log(feeds[i]);
+		//If the tweet has been retweeted, get the profile pic of the tweeter
+		if(typeof feeds[i].retweeted_status != 'undefined'){
+			profileimage = feeds[i].retweeted_status.user.profile_image_url_https;
+			tweetscreenname = feeds[i].retweeted_status.user.name;
+			tweetusername = feeds[i].retweeted_status.user.screen_name;
+			tweetid = feeds[i].retweeted_status.id_str
+			isaretweet = true;
+		};
 
-	if (((showretweets == true) || ((isaretweet == false) && (showretweets == false))) && ((showdirecttweets == true) || ((showdirecttweets == false) && (isdirect == false)))) {
-		if ((feeds[i].text.length > 1) && (displayCounter <= displaylimit)) {
-			if (showtweetlinks == true) {
-		status = addlinks(status);
-	}
-
-	if (displayCounter == 1) {
-		feedHTML += headerHTML;
-	}
-
-	feedHTML += '<div class="twitter-article">';
-	feedHTML += '<div class="twitter-pic"><a href="https://twitter.com/'+tweetusername+'" ><img src="'+profileimage+'"images/twitter-feed-icon.png" width="42" height="42" alt="twitter icon" /></a></div>';
-	feedHTML += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/'+tweetusername+'" >'+tweetscreenname+'</a></strong> <a href="https://twitter.com/'+tweetusername+'" >@'+tweetusername+'</a></span><span class="tweet-time"><a href="https://twitter.com/'+tweetusername+'/status/'+tweetid+'">'+relative_time(feeds[i].created_at)+'</a></span><br/>'+status+'</p></div>';
-	feedHTML += '</div>';
-	displayCounter++;
-			}
+		//Check to see if the tweet is a direct message
+		if (feeds[i].text.substr(0,1) == "@") {
+			isdirect = true;
 		}
+		//console.log(feeds[i]);
+
+		if (((showretweets == true) || ((isaretweet == false) && (showretweets == false))) && ((showdirecttweets == true) || ((showdirecttweets == false) && (isdirect == false)))) {
+			if ((feeds[i].text.length > 1) && (displayCounter <= displaylimit)) {
+				if (showtweetlinks == true) {
+			status = addlinks(status);
+		}
+
+		if (displayCounter == 1) {
+			feedHTML;
+		}
+
+		feedHTML += '<div class="twitter-article">';
+		feedHTML += '<div class="twitter-pic"><a href="https://twitter.com/'+tweetusername+'" ><img src="'+profileimage+'"images/twitter-feed-icon.png" width="42" height="42" alt="twitter icon" /></a></div>';
+		feedHTML += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/'+tweetusername+'" >'+tweetscreenname+'</a></strong> <a href="https://twitter.com/'+tweetusername+'" >@'+tweetusername+'</a></span><span class="tweet-time"><a href="https://twitter.com/'+tweetusername+'/status/'+tweetid+'">'+relative_time(feeds[i].created_at)+'</a></span><br/>'+status+'</p></div>';
+		feedHTML += '</div>';
+		displayCounter++;
+				}
+			}
 	}
 
 	$('#jstwitter').html(feedHTML);
