@@ -11,8 +11,8 @@ $settings = array(
 );
 
 /** URL for REST request, see: https://dev.twitter.com/docs/api/1.1/ **/
-$url = 'https://api.twitter.com/1.1/blocks/create.json';
-$requestMethod = 'GET';
+$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+$requestMethod = 'POST';
 
 /** POST fields required by the URL above. See relevant docs as above **/
 $postfields = array(
@@ -34,3 +34,5 @@ $twitter = new TwitterAPIExchange($settings);
 echo $twitter->setGetfield($getfield)
              ->buildOauth($url, $requestMethod)
              ->performRequest();
+
+?>

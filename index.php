@@ -325,7 +325,7 @@
 	<script src="/js/masonry.pkgd.min.js"></script>
 	<script src="/js/twitter-scripts.js"></script>
 	<script src="/js/post-scripts.js"></script>
-	<script src="/js/tweets.js"></script>
+	<script src="/php/twitter.php"></script>
 	<script type="text/javascript">
 		$(function () {
 		    // start jqtweet!
