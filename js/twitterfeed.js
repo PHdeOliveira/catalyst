@@ -62,13 +62,18 @@ $(function () {
 		// 		}
 		// 	}
 	}
+});
+
+	console.log(tweetResults);
+		console.log(container);
+
+		console.dir(tweetResults);
+		console.dir(container);
 
 	for (var t = 0; t < container.length; t++) {
-
+		
 		container[t].replaceChild(tweetResults[t],container[t].firstElementChild);
 	}
-
-});
 
 	//Function modified from Stack Overflow
 	function addlinks(data) {
