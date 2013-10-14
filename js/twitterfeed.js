@@ -8,15 +8,18 @@ $(function () {
 	var showretweets = true;
 	var showtweetlinks = true;
 	var showprofilepic = false;
-	var tweetResults = [];
-	var container = document.getElementsByClassName('twitter-container');
+	
 
 	$.getJSON('/php/get-tweets.php', function(feeds) {
+
+		var tweetResults = [];
+		var container = document.getElementsByClassName('twitter-container');
 		//alert(feeds);
 		var feedHTML = '';
 		var displayCounter = 1;
 
 		for (var i=0; i<feeds.length; i++) {
+
 			var tweet = feeds[i];
 			var tweetscreenname = feeds[i].user.name;
 			var tweetusername = feeds[i].user.screen_name;
@@ -62,18 +65,20 @@ $(function () {
 		// 		}
 		// 	}
 		}
+
+		console.log(tweetResults);
+		console.log(container);
+
+		console.dir(tweetResults);
+		console.dir(container);
+
+		for (var t = 0; t < container.length; t++) {
+			
+			container[t].replaceChild(tweetResults[t],container[t]);
+		}
 	});
 
-	console.log(tweetResults);
-	console.log(container);
-
-	console.dir(tweetResults);
-	console.dir(container);
-
-	for (var t = 0; t < container.length; t++) {
-		
-		container[t].replaceChild(tweetResults[t],container[t]);
-	}
+	
 
 	//Function modified from Stack Overflow
 	function addlinks(data) {
