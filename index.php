@@ -7,7 +7,7 @@
 </head>
 	<body class="post-site">
 
-		<div id="jstwitter"></div>
+		<div id="jstwitter">TEST</div>
 
 		<div class="container">
 			<div id="post-header">
