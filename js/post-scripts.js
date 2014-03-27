@@ -23,7 +23,7 @@ function listTweets() {
         var tweets = [];
         $.each(data, function(key, val) {
             tweets.push(key + ' ' + val);
-        }).
+        });
 
         console.log(tweets);
 
