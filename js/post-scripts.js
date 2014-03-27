@@ -22,9 +22,11 @@ function listTweets() {
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var item = [];
 
+        console.log(data);
+
     });
 
-    console.log(item);
+
 
 }
 
