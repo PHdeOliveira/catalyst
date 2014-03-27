@@ -20,9 +20,12 @@ $('.twitter-container').hide();
 function listTweets() {
 
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
-        var item = [];
+        var tweets = [];
+        $.each(data, function(key, val) {
+            tweets.push(key + ' ' + val);
+        }).
 
-        console.log(data);
+        console.log(tweets);
 
     });
 
