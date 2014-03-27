@@ -22,10 +22,10 @@ function listTweets() {
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
         $.each(data, function(key, val) {
-            tweets.push(key + ' ' + val);
+
         });
 
-        console.dir(tweets);
+        console.log(data);
 
     });
 
