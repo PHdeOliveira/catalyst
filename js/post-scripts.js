@@ -19,11 +19,15 @@ $('.twitter-container').hide();
 
 function listTweets() {
 
+    var twitterContainer = $('.twitter-container');
+
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
         $.each(data, function(key, val) {
             console.log(key);
             console.log(val);
+            console.log(twitterContainer);
+            console.log(twitterContainer.length);
         });
 
         //console.log(data);
