@@ -25,10 +25,12 @@ function listTweets() {
         var tweets = [];
         $.each(data, function(key, val) {
             tweets.push(val);
-            console.log(tweets + 'inside of .each');
         });
 
-        console.log(tweets);
+        twitterContainer.each(function() {
+            tweets.text.prepend(twitterContainer);
+        })
+
 
     });
 
