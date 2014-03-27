@@ -1,6 +1,3 @@
-//Beta Branch
-
-
 // Scripts for New Post Event Site
 
 //Masonry Initialize
@@ -14,68 +11,58 @@ var msnry = new Masonry( container, {
   gutter: 4
 });
 
-
-document.querySelector('.twitter-container').hidden = true;
+$('.twitter-container').hide();
 
 function twitterCall() {
 
  setTimeout(function(){
 
- 	document.querySelector('.twitter-container').hidden = false;
-
- 	var loader = document.getElementsByClassName('sm-twitter');
-	var frame = document.getElementById('twitter-widget-0');
-	var stream = frame.contentDocument.firstChild.children[1].children[0].children[2];
-	var feed = stream.firstElementChild;
-	var feedChildren = feed.children;
+ 	
+ 	var container = $('.twitter-container');
+ 	container.show();
+ 	var loader = $('.sm-twitter');
+ 	var t = 0;
+	var frame = $('#twitter-widget-0');
+	var stream = frame.contents().find('.stream');;
+	var feed = stream.children().first();
+	var feedChildren = feed.children();
 	var tweet;
 	var tweetBody;
-
-	var container = document.getElementsByClassName('twitter-container');
 	var tweetResults = [];
 
-	
+	feedChildren.each(function(){
+		loader.children('.the-icons').hide();
+		tweet = $(this);
 
-	for (var i = 0; i < feedChildren.length; i++) {
+		tweet.children('.header').children('.h-card').hide();
+		tweet.css({
+			'height' : '156px',
+			'position' : 'relative',
+			'box-sizing' : 'border-box'
+		});
 
-		loader[i].firstElementChild.style.display = 'none';
-		tweet = feedChildren[i];
-		tweetBody = tweet.children[2];
+		tweet.children('.header').children().first().addClass('sm-date');
 
-		tweet.children[1].hidden = true;
-		tweet.children[3].hidden = true;
+		tweet.children('.footer').hide();
 
-		tweet.style.height = 156 + 'px';
-		tweet.style.position = 'relative';
-		tweet.style.boxSizing = 'border-box';
-		tweet.firstElementChild.style.position = 'absolute';
-		tweet.firstElementChild.style.right = 30 + 'px';
-		tweet.firstElementChild.style.bottom = 20 + 'px';
-		tweet.firstElementChild.setAttribute('class' , 'sm-date');
+		tweet.children('.e-entry-content').children().first().addClass('sm-text');
+		tweet.children('.e-entry-content').children('.retweet-credit').css({
+			'padding' : '10px 30px 0'
+		});
 
-		tweetBody.style.padding = '25px 30px 26px';
-
-		tweetBody.firstElementChild.style.color = '#fcfbf4';
-		tweetBody.firstElementChild.style.fontSize = 11 +'px';
-		tweetBody.firstElementChild.style.lineHeight = 13 + 'px';
-		tweetBody.firstElementChild.style.fontFamily = 'Avenir, helvetica, arial, sans-serif';
-		tweetBody.firstElementChild.style.fontWeight = 500;
-		tweetBody.firstElementChild.style.margin = 0;
-
-		// console.dir(tweetBody);
+		tweet.removeClass('tweet');
 
 		tweetResults.push(tweet);
-	
-	}
-
-	// console.log(container);
-
-	for (var t = 0; t < container.length; t++) {
-
-		tweetResults[t].setAttribute('class', 'h-entry with-expansion  customisable-border');
 		
-		container[t].replaceChild(tweetResults[t],container[t].firstElementChild);
-	}
+	});
+
+	container.each(function(){	
+
+		t++;
+		$(this).children().replaceWith(tweetResults[t]);
+
+	});
+
 
 }, 700)
 
@@ -101,16 +88,8 @@ function vimeoLoad() {
 
 
 function load() {
-	// twitterCall();
+	twitterCall();
 	vimeoLoad();
 }
 
 window.onload = load;
-
-
-
-
-
-
-
-

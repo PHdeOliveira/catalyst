@@ -25,10 +25,10 @@
 
 				<div class="twitter-container">
 
-					<!--a class="twitter-timeline" href="https://twitter.com/CatalystLeader" data-widget-id="385848764910407680" width="280" height="156" data-chrome="noheader nofooter transparent noborders noscrollbar" data-tweet-limit="8"></a>
+					<a class="twitter-timeline" href="https://twitter.com/CatalystLeader" data-widget-id="385848764910407680" width="280" height="156" data-chrome="noheader nofooter transparent noborders noscrollbar" data-tweet-limit="9"></a>
 
 
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script-->
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 				</div>
 
@@ -324,7 +324,8 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="/js/masonry.pkgd.min.js"></script>
 	<script src="/js/post-scripts.js"></script>
-	<script src="/js/twitterfeed.js"></script>
+	<script type="http://playitbypixels.com/catalyst/php/get-tweets.php"></script>
+	<!--script src="/js/twitterfeed.js"></script-->
 
 	</body>
 </html>

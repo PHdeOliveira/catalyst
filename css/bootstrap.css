@@ -58,16 +58,12 @@ sub {
 }
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
-
   max-width: 100%;
   /* Part 1: Set a maxium relative to the parent */
-
   width: auto\9;
   /* IE7-8 need help adjusting responsive images */
-
   height: auto;
   /* Part 2: Scale the height according to the width, otherwise you get stretching */
-
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -162,7 +158,7 @@ textarea {
   img {
     max-width: 100% !important;
   }
-  @page  {
+  @page {
     margin: 0.5cm;
   }
   p,
@@ -4537,12 +4533,11 @@ article.slide.collaborative.related_entry {
   #search_entries {
     width: 100% !important;
     /*.slide_item{
-        width: 240px !important;
-      }
-      .slide_window{
-        width: 240px !important;
-      }*/
-  
+      width: 240px !important;
+    }
+    .slide_window{
+      width: 240px !important;
+    }*/
   }
   #entries .entry_slider .swiper-wrapper,
   #search_entries .entry_slider .swiper-wrapper {
@@ -5600,27 +5595,18 @@ p {
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
-
   /* For safety - reset parent styles, that can break glyph codes*/
-
   font-variant: normal;
   text-transform: none;
   /* fix buttons height, for twitter bootstrap */
-
   line-height: 1em;
   /* Animation center compensation - margins should be symmetric */
-
   /* remove if not needed */
-
   margin-left: .2em;
   /* you can be more comfortable with increased icons size */
-
   /* font-size: 120%; */
-
   /* Uncomment for 3D effect */
-
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-
 }
 .icon-spin1:before {
   content: '\e800';
