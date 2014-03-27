@@ -324,7 +324,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="/js/masonry.pkgd.min.js"></script>
 	<script src="/js/post-scripts.js"></script>
-	<script type="http://playitbypixels.com/catalyst/php/get-tweets.php"></script>
+	<script type="http://playitbypixels.com/catalyst/php/get-tweets.php?callback=listTweets"></script>
 	<!--script src="/js/twitterfeed.js"></script-->
 
 	</body>
