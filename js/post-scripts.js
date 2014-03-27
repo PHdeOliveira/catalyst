@@ -24,7 +24,8 @@ function listTweets() {
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
         $.each(data, function(key, val) {
-            tweets.push(key);
+            tweets.push(val);
+            console.log(tweets + 'inside of .each');
         });
 
         console.log(tweets);
