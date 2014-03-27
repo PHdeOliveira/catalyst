@@ -25,7 +25,7 @@ function listTweets() {
             tweets.push(key + ' ' + val);
         });
 
-        console.log(tweets);
+        console.dir(tweets);
 
     });
 
