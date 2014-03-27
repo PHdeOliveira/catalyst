@@ -19,7 +19,7 @@ $('.twitter-container').hide();
 
 function listTweets() {
 
-    $.getJSON('http://playitbypixels.com/catalyst/php/get-tweets.php', function(data) {
+    $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var item = [];
 
     });
