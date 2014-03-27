@@ -11,14 +11,21 @@ var msnry = new Masonry(container, {
     gutter: 4
 });
 
-var data = "http://playitbypixels.com/catalyst/php/get-tweets.php";
+
 
 $('.twitter-container').hide();
 
 
 
-function listTweets(data) {
-    console.log(data);
+function listTweets() {
+
+    $.getJSON('http://playitbypixels.com/catalyst/php/get-tweets.php', function(data) {
+        var item = [];
+
+    });
+
+    console.log(item);
+
 }
 
 function twitterCall() {
