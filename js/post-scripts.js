@@ -27,9 +27,9 @@ function listTweets() {
         $.each(data, function(key, val) {
             tweets.push(val);
 
-            twitterContainer.prepend('<p>' + val + '</p>');
+            twitterContainer.prepend('<p>' + val[count++].text + '</p>');
 
-            console.log(val);
+            // console.log(val);
 
 
 
