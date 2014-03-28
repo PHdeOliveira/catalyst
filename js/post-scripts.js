@@ -27,7 +27,9 @@ function listTweets() {
         $.each(data, function(key, val) {
             tweets.push(val);
 
-            console.log(twitterContainer);
+            twitterContainer.prepend('<p>' + val + '</p>');
+
+            console.log(val);
 
 
 
@@ -122,9 +124,10 @@ function vimeoLoad() {
 
 
 function load() {
-    twitterCall();
-    vimeoLoad();
     listTweets();
+    // twitterCall();
+    // vimeoLoad();
+
 }
 
 window.onload = load;
