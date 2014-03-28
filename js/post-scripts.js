@@ -28,8 +28,9 @@ function listTweets() {
         $('.twitter-container').each(function() {
             twitterContainer.push($(this));
 
-
         });
+
+        console.log(array);
 
         for (var i = 0; i < tweets.length; i++) {
             twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
