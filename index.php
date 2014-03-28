@@ -19,9 +19,7 @@
 
 			<div class="sm sm-twitter item">
 
-				<!-- <div title="Code: 0xe800" class="the-icons"><i class="icon-spin1 animate-spin"></i></div> -->
-
-				<!-- <div title="Code: 0xe800" class="the-icons"><i class="icon-spin1 animate-spin"></i></div> -->
+				<div title="Code: 0xe800" class="the-icons"><i class="icon-spin1 animate-spin"></i></div>
 
 				<div class="twitter-container">
 					<!--
