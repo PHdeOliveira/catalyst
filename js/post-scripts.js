@@ -23,6 +23,7 @@ function listTweets() {
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
         var twitterContainer = [];
+        var i = 0;
         $.each(data, function(key, val) {
             tweets.push(val);
             twitterContainer.push($('.twitter-container'));
@@ -32,10 +33,14 @@ function listTweets() {
         });
         console.log(tweets);
         console.log(twitterContainer[0]);
+        // for (var i = 0; i < tweets.length; i++) {
+        //     twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
+        // }
 
-        for (var i = 0; i < tweets.length; i++) {
-            twitterContainer[i][i].prepend('<p>' + tweets[i].text + '</p>');
-        }
+        $('.twitter-container').each(function() {
+            i++;
+            $(this).prepend('<p>' + tweets[i] + '</p>');
+        })
 
 
     });
