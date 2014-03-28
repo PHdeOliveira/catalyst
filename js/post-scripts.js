@@ -19,21 +19,20 @@ $('.twitter-container').hide();
 
 function listTweets() {
 
-    var twitterContainer = $('.twitter-container');
-
-
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
+        var twitterContainer = [];
         $.each(data, function(key, val) {
             tweets.push(val);
-            i++;
+            twitterContainer.push($('.twitter-container'));
+
             // console.log(val.text);
             // twitterContainer.prepend('<p>' + val.text + '</p>');
         });
         console.log(tweets);
 
         for (var i = 0; i < tweets.length; i++) {
-            twitterContainer.prepend('<p>' + tweets[i].text + '</p>');
+            twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
         }
 
 
