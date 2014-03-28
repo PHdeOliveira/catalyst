@@ -11,7 +11,7 @@ var msnry = new Masonry(container, {
     gutter: 4
 });
 
-
+$('.twitter-container').hide();
 
 $(function() {
 
@@ -30,7 +30,9 @@ $(function() {
             twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
         }
     }).done(function() {
-        alert('json is done');
+        $('.the-icons').hide();
+        $('.twitter-container').show();
+
     });
 
     // }
