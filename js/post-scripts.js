@@ -1,13 +1,5 @@
 // Scripts for New Post Event Site
 
-$(document).ready(function() {
-    alert("document ready occurred!");
-});
-
-$(window).load(function() {
-    alert("window load occurred!");
-});
-
 //Masonry Initialize
 
 var container = document.querySelector('.masonry');
@@ -19,7 +11,7 @@ var msnry = new Masonry(container, {
     gutter: 4
 });
 
-$('.the-icons').hide();
+
 
 $(function() {
 
@@ -30,7 +22,6 @@ $(function() {
         var twitterContainer = [];
         $.each(data, function(key, val) {
             tweets.push(val);
-
         });
         $('.twitter-container').each(function() {
             twitterContainer.push($(this));
@@ -38,6 +29,8 @@ $(function() {
         for (var i = 0; i < tweets.length; i++) {
             twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
         }
+    }).done(function() {
+        alert('json is done';)
     });
 
     // }
