@@ -24,20 +24,22 @@ function listTweets() {
             tweets.push(val);
             twitterContainer.push($('.twitter-container'));
 
-            console.log(val);
+            console.log($('.twitter-container'));
+
+            // console.log(val);
             // console.log(val.text);
             // twitterContainer.prepend('<p>' + val.text + '</p>');
         });
-        console.log(tweets);
+        // console.log(tweets);
 
         // for (var i = 0; i < tweets.length; i++) {
         //     twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
         // }
 
-        $('.twitter-container').each(function() {
-            ++i;
-            $(this).prepend('<p>' + tweets[i].text + '</p>');
-        })
+        // $('.twitter-container').each(function() {
+        //     ++i;
+        //     $(this).prepend('<p>' + tweets[i].text + '</p>');
+        // })
 
 
     });
