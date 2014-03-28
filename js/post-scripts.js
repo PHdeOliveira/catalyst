@@ -15,8 +15,6 @@ $('.twitter-container').hide();
 
 $(function() {
 
-    // function listTweets() {
-
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
         var twitterContainer = [];
@@ -27,27 +25,20 @@ $(function() {
         $('.twitter-container').each(function() {
             twitterContainer.push($(this));
         });
-
-        console.log(tweets);
-
         for (var i = 0; i < tweets.length; i++) {
-
             var text = tweets[i].text;
-
-            console.log(text);
+            var date = tweets[i].created_at;
             //Parse URLs 
             text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(u) {
                 var url = u.link(u);
                 return url;
             });
-
             //Parse @mentions
             text = text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
                 var item = u.replace('@', '')
                 var url = u.link('https://twitter.com/' + item);
                 return url;
             });
-
             //Parse #hashtags
             text = text.replace(/[#]+[A-Za-z0-9-_]+/g, function(u) {
                 var item = u.replace('#', '')
@@ -55,8 +46,12 @@ $(function() {
                 return url;
             });
 
+            //Parse Date
+            function parseDate(date) {
+                return new Date(Date.parse(text.replace(/( +)/, ' UTC$1')));
+            };
 
-            twitterContainer[i].prepend('<p>' + text + '</p>');
+            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + date + '</span>');
         }
     }).done(function() {
         $('.the-icons').hide();
