@@ -48,7 +48,7 @@ $(function() {
 
             //Parse Date
             function parseDate(date) {
-                return new Date(Date.parse(text.replace(/( +)/, ' UTC$1')));
+                return new Date(Date.parse(date.replace(/( +)/, ' UTC$1')));
             };
 
             twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + date + '</span>');
