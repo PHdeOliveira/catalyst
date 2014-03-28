@@ -26,7 +26,7 @@ $(function() {
             text = text.replace(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/, function(u) {
                 var url = u.link(u);
                 return url;
-            })
+            });
 
             tweets.push(val);
         });
