@@ -1,5 +1,13 @@
 // Scripts for New Post Event Site
 
+$(document).ready(function() {
+    alert("document ready occurred!");
+});
+
+$(window).load(function() {
+    alert("window load occurred!");
+});
+
 //Masonry Initialize
 
 var container = document.querySelector('.masonry');
