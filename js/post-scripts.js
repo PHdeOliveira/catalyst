@@ -20,36 +20,21 @@ $('.twitter-container').hide();
 function listTweets() {
 
     var twitterContainer = $('.twitter-container');
-    var i = 0;
+
 
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
         $.each(data, function(key, val) {
             tweets.push(val);
-
             i++;
-
-            console.log(val.text);
-
-
-            twitterContainer.prepend('<p>' + val.text + '</p>');
-
-            // console.log(val);
-
-
-
-
+            // console.log(val.text);
+            // twitterContainer.prepend('<p>' + val.text + '</p>');
         });
-
         console.log(tweets);
 
-        twitterContainer.each(function() {
-            count++;
-
-
-
-            // tweets.text.prepend(twitterContainer);
-        })
+        for (var i = 0; i < tweets.length; i++) {
+            twitterContainer.prepend('<p>' + val.text + '</p>');
+        }
 
 
     });
