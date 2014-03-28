@@ -13,8 +13,9 @@ var msnry = new Masonry(container, {
 
 $('.the-icons').hide();
 
+$(function() {
 
-function listTweets() {
+    // function listTweets() {
 
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
@@ -31,7 +32,9 @@ function listTweets() {
         }
     });
 
-}
+    // }
+
+});
 
 function twitterCall() {
 
