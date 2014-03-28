@@ -19,12 +19,12 @@ function listTweets() {
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
         var twitterContainer = [];
-        var array = [];
+        var array = $('.twitter-container');
 
-        $.each(data, $('.twitter-container'), function(key, val) {
+        $.each(data, array, function(key, val) {
             tweets.push(val);
-            array.push($('.twitter-container'));
-            console.log($('.twitter-container'));
+
+            console.log(array);
         });
         $('.twitter-container').each(function() {
             twitterContainer.push($(this));
