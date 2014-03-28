@@ -20,17 +20,20 @@ function listTweets() {
         var tweets = [];
         var twitterContainer = [];
         var i = 0;
+
         $.each(data, function(key, val) {
-            i++;
             tweets.push(val);
-            twitterContainer.push($('.twitter-container'));
-
-            console.log(twitterContainer[0]);
-
             // console.log(val);
             // console.log(val.text);
             // twitterContainer.prepend('<p>' + val.text + '</p>');
         });
+
+        $('.twitter-container').each(function() {
+            i++;
+            $(this).prepend('<p>' + tweets[i].text + '</p>');
+        });
+
+
         // console.log(tweets);
 
         // for (var i = 0; i < tweets.length; i++) {
