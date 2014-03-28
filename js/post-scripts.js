@@ -27,9 +27,11 @@ $(function() {
                 var url = u.link(u);
                 return url;
             });
-
             tweets.push(val);
         });
+
+        console.log(tweets);
+
         $('.twitter-container').each(function() {
             twitterContainer.push($(this));
         });
