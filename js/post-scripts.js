@@ -28,6 +28,8 @@ $(function() {
             twitterContainer.push($(this));
         });
 
+        console.log(tweets);
+
         for (var i = 0; i < tweets.length; i++) {
 
             var text = tweets[i].text;
