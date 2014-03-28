@@ -30,7 +30,7 @@ $(function() {
             twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
         }
     }).done(function() {
-        alert('json is done';)
+        alert('json is done');
     });
 
     // }
