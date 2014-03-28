@@ -11,11 +11,7 @@ var msnry = new Masonry(container, {
     gutter: 4
 });
 
-
-
-$('.twitter-container').hide();
 $('.the-icons').hide();
-
 
 
 function listTweets() {
@@ -28,11 +24,12 @@ function listTweets() {
             tweets.push(val);
             twitterContainer.push($('.twitter-container'));
 
+            console.log(data);
             // console.log(val.text);
             // twitterContainer.prepend('<p>' + val.text + '</p>');
         });
-        console.log(tweets);
-        console.log(twitterContainer[0]);
+        // console.log(tweets);
+
         // for (var i = 0; i < tweets.length; i++) {
         //     twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
         // }
