@@ -14,6 +14,7 @@ var msnry = new Masonry(container, {
 
 
 $('.twitter-container').hide();
+$('.the-icons').hide();
 
 
 
@@ -30,6 +31,7 @@ function listTweets() {
             // twitterContainer.prepend('<p>' + val.text + '</p>');
         });
         console.log(tweets);
+        console.log(twitterContainer);
 
         for (var i = 0; i < tweets.length; i++) {
             twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
