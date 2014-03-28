@@ -33,7 +33,7 @@ function listTweets() {
         console.log(tweets);
 
         for (var i = 0; i < tweets.length; i++) {
-            twitterContainer.prepend('<p>' + val.text + '</p>');
+            twitterContainer.prepend('<p>' + tweets[i].text + '</p>');
         }
 
 
