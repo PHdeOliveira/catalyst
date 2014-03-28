@@ -33,6 +33,9 @@ $(function() {
         for (var i = 0; i < tweets.length; i++) {
 
             var text = tweets[i].text;
+
+            console.log(text);
+
             text = text.replace(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/, function(u) {
                 var url = u.link(u);
                 return url;
