@@ -36,22 +36,27 @@ $(function() {
             //Parse @mentions
             text = text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
                 var item = u.replace('@', '')
-                var url = u.link('https://twitter.com/' + item);
-                return url;
+                var mentions = u.link('https://twitter.com/' + item);
+                return mentions;
             });
             //Parse #hashtags
             text = text.replace(/[#]+[A-Za-z0-9-_]+/g, function(u) {
                 var item = u.replace('#', '')
-                var url = u.link('https://twitter.com/search?q=%23' + item + '&src=hash');
-                return url;
+                var hashtags = u.link('https://twitter.com/search?q=%23' + item + '&src=hash');
+                return hashtags;
             });
 
             //Parse Date
+
+            // return new Date(Date.parse(date.replace(/( +)/, ' UTC$1')));
+
+
+
             function parseDate(date) {
                 return new Date(Date.parse(date.replace(/( +)/, ' UTC$1')));
             };
 
-            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + date + '</span>');
+            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + parseDate() + '</span>');
         }
     }).done(function() {
         $('.the-icons').hide();
