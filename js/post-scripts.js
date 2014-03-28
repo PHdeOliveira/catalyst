@@ -20,14 +20,14 @@ $('.twitter-container').hide();
 function listTweets() {
 
     var twitterContainer = $('.twitter-container');
-    var count = 0;
+    var i = 0;
 
     $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
         var tweets = [];
         $.each(data, function(key, val) {
             tweets.push(val);
 
-            twitterContainer.prepend('<p>' + val[count++].text + '</p>');
+            twitterContainer.prepend('<p>' + val[key].text + '</p>');
 
             // console.log(val);
 
