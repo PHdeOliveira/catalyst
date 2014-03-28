@@ -21,21 +21,22 @@ $(function() {
         var tweets = [];
         var twitterContainer = [];
         $.each(data, function(key, val) {
-            var text = data[key].text;
-
-            text = text.replace(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/, function(u) {
-                var url = u.link(u);
-                return url;
-            });
             tweets.push(val);
         });
-
-        console.log(tweets);
 
         $('.twitter-container').each(function() {
             twitterContainer.push($(this));
         });
+
         for (var i = 0; i < tweets.length; i++) {
+
+            var text = tweets[i].text;
+            text = text.replace(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/, function(u) {
+                var url = u.link(u);
+                return url;
+            });
+
+
             twitterContainer[i].prepend('<p>' + tweets[i].text + '</p>');
         }
     }).done(function() {
