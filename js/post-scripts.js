@@ -44,7 +44,14 @@ $(function() {
             //Parse @mentions
             text = text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
                 var item = u.replace('@', '')
-                var url = u.link('http://twitter.com/' + item);
+                var url = u.link('https://twitter.com/' + item);
+                return url;
+            });
+
+            //Parse #hashtags
+            text = text.replace(/[#]+[A-Za-z0-9-_]+/g, function(u) {
+                var item = u.replace('#', '')
+                var url = u.link('https://twitter.com/search?q=%23' + item + '&src=hash');
                 return url;
             });
 
