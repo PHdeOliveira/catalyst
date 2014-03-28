@@ -21,7 +21,7 @@ function listTweets() {
         var twitterContainer = [];
         var array = [];
 
-        $.each(data, function(key, val) {
+        $.each(data, $('.twitter-container'), function(key, val) {
             tweets.push(val);
             array.push($('.twitter-container'));
             console.log($('.twitter-container'));
