@@ -28,7 +28,7 @@ function listTweets() {
             // twitterContainer.prepend('<p>' + val.text + '</p>');
         });
 
-        console.log($('.twitter-container').length);
+        console.log(tweets);
 
         $('.twitter-container').each(function() {
             i++;
