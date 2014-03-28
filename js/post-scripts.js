@@ -21,6 +21,13 @@ $(function() {
         var tweets = [];
         var twitterContainer = [];
         $.each(data, function(key, val) {
+            var text = data[key].text;
+
+            text = text.replace(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/, function(u) {
+                var url = u.link(u);
+                return url;
+            })
+
             tweets.push(val);
         });
         $('.twitter-container').each(function() {
