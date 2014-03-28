@@ -35,9 +35,16 @@ $(function() {
             var text = tweets[i].text;
 
             console.log(text);
-
+            //Parse URLs 
             text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(u) {
                 var url = u.link(u);
+                return url;
+            });
+
+            //Parse @mentions
+            text = text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
+                var item = u.replace('@', '')
+                var url = u.link('http://twitter.com/' + item);
                 return url;
             });
 
