@@ -35,7 +35,7 @@ function listTweets() {
         // }
 
         $('.twitter-container').each(function() {
-            i++;
+            ++i;
             $(this).prepend('<p>' + tweets[i].text + '</p>');
         })
 

@@ -24,11 +24,12 @@
 				<!-- <div title="Code: 0xe800" class="the-icons"><i class="icon-spin1 animate-spin"></i></div> -->
 
 				<div class="twitter-container">
-
+					<!--
 					<a class="twitter-timeline" href="https://twitter.com/CatalystLeader" data-widget-id="385848764910407680" width="280" height="156" data-chrome="noheader nofooter transparent noborders noscrollbar" data-tweet-limit="9"></a>
 
 
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				-->
 
 				</div>
 
