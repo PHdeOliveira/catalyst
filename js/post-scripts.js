@@ -107,11 +107,11 @@ function vimeoLoad() {
 }
 
 
-function load() {
-    listTweets();
-    // twitterCall();
-    // vimeoLoad();
+// function load() {
+//     listTweets();
+//     // twitterCall();
+//     // vimeoLoad();
 
-}
+// }
 
-window.onload = load;
+// window.onload = load;
