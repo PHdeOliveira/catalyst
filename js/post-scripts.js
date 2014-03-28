@@ -29,10 +29,10 @@ function listTweets() {
 
             i++;
 
-            console.log(val[0].text);
+            console.log(val.text);
 
 
-            twitterContainer.prepend('<p>' + val[i].text + '</p>');
+            twitterContainer.prepend('<p>' + val.text + '</p>');
 
             // console.log(val);
 
@@ -40,6 +40,8 @@ function listTweets() {
 
 
         });
+
+        console.log(tweets);
 
         twitterContainer.each(function() {
             count++;
