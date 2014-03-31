@@ -58,6 +58,9 @@ $(function() {
             console.log(relative_to);
 
             var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
+
+            console.log(delta);
+
             delta = delta + (relative_to.getTimezoneOffset() * 60);
 
             var r = '';
