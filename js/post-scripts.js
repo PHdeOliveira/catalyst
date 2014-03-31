@@ -62,15 +62,15 @@ $(function() {
             delta = delta + (relative_to.getTimezoneOffset() * 60);
 
             var r = '';
-            if (delta < 60) {
-                r = 'a minute ago';
-            } else if (delta < 120) {
-                r = 'couple of minutes ago';
-            } else if (delta < (45 * 60)) {
-                r = (parseInt(delta / 60)).toString() + ' minutes ago';
-            } else if (delta < (90 * 60)) {
-                r = 'an hour ago';
-            } else if (delta < (24 * 60 * 60)) {
+            // if (delta < 60) {
+            //     r = 'a minute ago';
+            // } else if (delta < 120) {
+            //     r = 'couple of minutes ago';
+            // } else if (delta < (45 * 60)) {
+            //     r = (parseInt(delta / 60)).toString() + ' minutes ago';
+            // } else if (delta < (90 * 60)) {
+            //     r = 'an hour ago'; } else 
+            if (delta < (24 * 60 * 60)) {
                 r = '' + (parseInt(delta / 3600)).toString() + ' hours ago';
             } else if (delta < (48 * 60 * 60)) {
                 r = '1 day ago';
