@@ -51,13 +51,9 @@ $(function() {
             var date_split = date.split(' ');
             date = date_split[1] + " " + date_split[2] + ", " + date_split[5] + " " + date_split[3];
 
-
             var parsed_date = Date.parse(date);
 
-            console.log(date_split);
-            console.log(date);
-            console.log(parsed_date);
-            var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
+            var relative_to = (date.length > 1) ? date[1] : new Date();
             var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
             delta = delta + (relative_to.getTimezoneOffset() * 60);
 
