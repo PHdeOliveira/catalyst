@@ -84,8 +84,7 @@ $(function() {
                 r = (parseInt(delta / 86400)).toString() + ' days ago';
             }
 
-            return r;
-
+            // return r;
             twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + date + '</span>');
         }
     }).done(function() {
