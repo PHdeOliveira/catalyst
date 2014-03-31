@@ -15,75 +15,74 @@ $('.twitter-container').hide();
 
 $(function() {
 
-        $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
-                var tweets = [];
-                var twitterContainer = [];
-                $.each(data, function(key, val) {
-                    tweets.push(val);
-                });
+    $.getJSON('http://catalyst.playitbypixels.com/php/get-tweets.php', function(data) {
+        var tweets = [];
+        var twitterContainer = [];
+        $.each(data, function(key, val) {
+            tweets.push(val);
+        });
 
-                $('.twitter-container').each(function() {
-                    twitterContainer.push($(this));
-                });
-                for (var i = 0; i < tweets.length; i++) {
-                    var text = tweets[i].text;
-                    var date = tweets[i].created_at;
-                    //Parse URLs 
-                    text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(u) {
-                        var url = u.link(u);
-                        return url;
-                    });
-                    //Parse @mentions
-                    text = text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
-                        var item = u.replace('@', '')
-                        var mentions = u.link('https://twitter.com/' + item);
-                        return mentions;
-                    });
-                    //Parse #hashtags
-                    text = text.replace(/[#]+[A-Za-z0-9-_]+/g, function(u) {
-                        var item = u.replace('#', '')
-                        var hashtags = u.link('https://twitter.com/search?q=%23' + item + '&src=hash');
-                        return hashtags;
-                    });
+        $('.twitter-container').each(function() {
+            twitterContainer.push($(this));
+        });
+        for (var i = 0; i < tweets.length; i++) {
+            var text = tweets[i].text;
+            var date = tweets[i].created_at;
+            //Parse URLs 
+            text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(u) {
+                var url = u.link(u);
+                return url;
+            });
+            //Parse @mentions
+            text = text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
+                var item = u.replace('@', '')
+                var mentions = u.link('https://twitter.com/' + item);
+                return mentions;
+            });
+            //Parse #hashtags
+            text = text.replace(/[#]+[A-Za-z0-9-_]+/g, function(u) {
+                var item = u.replace('#', '')
+                var hashtags = u.link('https://twitter.com/search?q=%23' + item + '&src=hash');
+                return hashtags;
+            });
 
-                    //Parse Date
+            //Parse Date
 
-                    var date_split = date.split(' ');
-                    date = date_split[1] + " " + date_split[2] + ", " + date_split[5] + " " + date_split[3];
+            var date_split = date.split(' ');
+            date = date_split[1] + " " + date_split[2] + ", " + date_split[5] + " " + date_split[3];
 
 
-                    var parsed_date = Date.parse(date);
+            var parsed_date = Date.parse(date);
 
-                    console.log(date_split);
-                    console.log(date);
-                    console.log(parsed_date);
-                    var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
-                    var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
-                    delta = delta + (relative_to.getTimezoneOffset() * 60);
+            console.log(date_split);
+            console.log(date);
+            console.log(parsed_date);
+            var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
+            var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
+            delta = delta + (relative_to.getTimezoneOffset() * 60);
 
-                    var r = '';
-                    if (delta < 60) {
-                        r = 'a minute ago';
-                    } else if (delta < 120) {
-                        r = 'couple of minutes ago';
-                    } else if (delta < (45 * 60)) {
-                        r = (parseInt(delta / 60)).toString() + ' minutes ago';
-                    } else if (delta < (90 * 60)) {
-                        r = 'an hour ago';
-                    } else if (delta < (24 * 60 * 60)) {
-                        r = '' + (parseInt(delta / 3600)).toString() + ' hours ago';
-                    } else if (delta < (48 * 60 * 60)) {
-                        r = '1 day ago';
-                    } else {
-                        r = (parseInt(delta / 86400)).toString() + ' days ago';
-                    }
-
-                    return r;
-                }
-
-                twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + r + '</span>');
+            var r = '';
+            if (delta < 60) {
+                r = 'a minute ago';
+            } else if (delta < 120) {
+                r = 'couple of minutes ago';
+            } else if (delta < (45 * 60)) {
+                r = (parseInt(delta / 60)).toString() + ' minutes ago';
+            } else if (delta < (90 * 60)) {
+                r = 'an hour ago';
+            } else if (delta < (24 * 60 * 60)) {
+                r = '' + (parseInt(delta / 3600)).toString() + ' hours ago';
+            } else if (delta < (48 * 60 * 60)) {
+                r = '1 day ago';
+            } else {
+                r = (parseInt(delta / 86400)).toString() + ' days ago';
             }
-        }).done(function() {
+
+            return r;
+
+            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + r + '</span>');
+        }
+    }).done(function() {
         $('.the-icons').hide();
         $('.twitter-container').show();
 
