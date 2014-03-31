@@ -21,7 +21,7 @@ $(function() {
         $.each(data, function(key, val) {
             tweets.push(val);
         });
-
+        console.log(tweets);
         $('.twitter-container').each(function() {
             twitterContainer.push($(this));
         });
