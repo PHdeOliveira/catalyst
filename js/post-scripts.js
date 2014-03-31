@@ -53,6 +53,10 @@ $(function() {
 
             var parsed_date = Date.parse(date);
 
+            console.log(date);
+
+            console.log(parsed_date);
+
             var relative_to = (parsed_date.length > 1) ? parsed_date[1] : new Date();
 
             console.log(relative_to);
