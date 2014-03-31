@@ -49,8 +49,6 @@ $(function() {
             //Parse Date
 
             var date_split = date.split(' ');
-            var values = time_value.split(" ");
-
             date = date_split[1] + " " + date_split[2] + ", " + date_split[5] + " " + date_split[3];
 
             console.log(date_split);
