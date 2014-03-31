@@ -78,7 +78,7 @@ $(function() {
                 // r = (parseInt(delta / 86400)).toString() + ' days ago';
                 r = date_split[1].toUpperCase() + ' ' + date_split[2];
             }
-            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><a href="https://twitter.com/CatalystLeader/statuses/' + tweets[i].user.screen_name + tweets[i].entities.id + '" class="sm-date">' + r + '</a>');
+            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><a href="https://twitter.com/CatalystLeader/statuses/' + tweets[i].user.screen_name + '/' + tweets[i].entities.id + '" class="sm-date">' + r + '</a>');
         }
     }).done(function() {
         $('.the-icons').hide();
