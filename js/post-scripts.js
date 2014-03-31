@@ -30,19 +30,19 @@ $(function() {
             var date = tweets[i].created_at;
             //Parse URLs 
             text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(u) {
-                var url = u.link(u);
+                var url = u.link(u).bold();
                 return url;
             });
             //Parse @mentions
             text = text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
                 var item = u.replace('@', '')
-                var mentions = u.link('https://twitter.com/' + item);
+                var mentions = u.link('https://twitter.com/' + item).bold();
                 return mentions;
             });
             //Parse #hashtags
             text = text.replace(/[#]+[A-Za-z0-9-_]+/g, function(u) {
                 var item = u.replace('#', '')
-                var hashtags = u.link('https://twitter.com/search?q=%23' + item + '&src=hash');
+                var hashtags = u.link('https://twitter.com/search?q=%23' + item + '&src=hash').bold();
                 return hashtags;
             });
 
