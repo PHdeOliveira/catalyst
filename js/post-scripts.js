@@ -85,7 +85,7 @@ $(function() {
             }
 
             // return r;
-            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + date + '</span>');
+            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + r + '</span>');
         }
     }).done(function() {
         $('.the-icons').hide();
