@@ -75,7 +75,8 @@ $(function() {
             } else if (delta < (48 * 60 * 60)) {
                 r = '1 day ago';
             } else {
-                r = (parseInt(delta / 86400)).toString() + ' days ago';
+                // r = (parseInt(delta / 86400)).toString() + ' days ago';
+                r = date_split[1] + ' ' + date_split[2];
             }
             twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + r + '</span>');
         }
