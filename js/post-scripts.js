@@ -53,7 +53,7 @@ $(function() {
 
             var parsed_date = Date.parse(date);
 
-            var relative_to = (date.length > 1) ? date[1] : new Date();
+            var relative_to = (date_split.length > 1) ? date_split[1] : new Date();
             var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
             delta = delta + (relative_to.getTimezoneOffset() * 60);
 
