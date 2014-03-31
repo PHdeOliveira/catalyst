@@ -48,11 +48,17 @@ $(function() {
 
             //Parse Date
 
-            dateSplit = date.split(' ');
+            var date_split = date.split(' ');
+            var values = time_value.split(" ");
 
-            console.log(dateSplit);
+            date = date_split[1] + " " + date_split[2] + ", " + date_split[5] + " " + date_split[3];
 
-            // return new Date(Date.parse(date.replace(/( +)/, ' UTC$1')));
+            console.log(date_split);
+            console.log(date);
+            // var parsed_date = Date.parse(time_value);
+            // var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
+            // var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
+            // delta = delta + (relative_to.getTimezoneOffset() * 60);    
 
 
 
@@ -60,7 +66,7 @@ $(function() {
                 return new Date(Date.parse(date.replace(/( +)/, ' UTC$1')));
             };
 
-            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + parseDate() + '</span>');
+            twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + date + '</span>');
         }
     }).done(function() {
         $('.the-icons').hide();
