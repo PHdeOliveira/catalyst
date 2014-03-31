@@ -53,17 +53,11 @@ $(function() {
 
             var parsed_date = Date.parse(date);
 
-            console.log(date);
-
-            console.log(parsed_date);
+            console.log(date_split);
 
             var relative_to = (parsed_date.length > 1) ? parsed_date[1] : new Date();
 
-            console.log(relative_to);
-
             var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
-
-            console.log(delta);
 
             delta = delta + (relative_to.getTimezoneOffset() * 60);
 
@@ -83,8 +77,6 @@ $(function() {
             } else {
                 r = (parseInt(delta / 86400)).toString() + ' days ago';
             }
-
-            // return r;
             twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + r + '</span>');
         }
     }).done(function() {
