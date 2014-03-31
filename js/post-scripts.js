@@ -71,9 +71,9 @@ $(function() {
             // } else if (delta < (90 * 60)) {
             //     r = 'an hour ago'; } else 
             if (delta < (24 * 60 * 60)) {
-                r = '' + (parseInt(delta / 3600)).toString() + ' hours ago';
+                r = '' + (parseInt(delta / 3600)).toString() + ' H';
             } else if (delta < (48 * 60 * 60)) {
-                r = '1 day ago';
+                r = '1 DAY AGO';
             } else {
                 // r = (parseInt(delta / 86400)).toString() + ' days ago';
                 r = date_split[1] + ' ' + date_split[2];
