@@ -48,6 +48,10 @@ $(function() {
 
             //Parse Date
 
+            dateSplit = date.split(' ');
+
+            console.log(dateSplit);
+
             // return new Date(Date.parse(date.replace(/( +)/, ' UTC$1')));
 
 
