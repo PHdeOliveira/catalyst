@@ -65,18 +65,18 @@ $(function() {
             // if (delta < 60) {
             //     r = 'a minute ago';
             // } else if (delta < 120) {
-            //     r = 'couple of minutes ago';
-            // } else if (delta < (45 * 60)) {
-            //     r = (parseInt(delta / 60)).toString() + ' minutes ago';
-            // } else if (delta < (90 * 60)) {
-            //     r = 'an hour ago'; } else 
-            if (delta < (24 * 60 * 60)) {
+            //     r = 'couple of minutes ago'; } else 
+            if (delta < (45 * 60)) {
+                r = (parseInt(delta / 60)).toString() + ' MIN';
+                // } else if (delta < (90 * 60)) {
+                //     r = 'an hour ago';  
+            } else if (delta < (24 * 60 * 60)) {
                 r = '' + (parseInt(delta / 3600)).toString() + ' H';
             } else if (delta < (48 * 60 * 60)) {
                 r = '1 DAY AGO';
             } else {
                 // r = (parseInt(delta / 86400)).toString() + ' days ago';
-                r = date_split[1] + ' ' + date_split[2];
+                r = date_split[1].toUpperCase() + ' ' + date_split[2];
             }
             twitterContainer[i].prepend('<p class="sm-text">' + text + '</p><span>' + r + '</span>');
         }
